@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>TestNG:  Dollar Days Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Dollar Days Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Oct 05 17:09:46 EDT 2020</td>
+</tr>
+<tr><td>Total time:</td><td>250 seconds (250880 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.dollardays.testcases.EmailPreferencesValidationsTestCase.EmailPreferences_LinksValidation()'><b>EmailPreferences_LinksValidation</b><br>Test class: com.dollardays.testcases.EmailPreferencesValidationsTestCase<br>Parameters: {TestCase=EmailPreferences_LinksValidation, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=EmailPreferences, ExpectedValue=Policies - DollarDays, UserName=srikanthtesting100@gmail.com, TCID=TC4, =}</td>
+<td></td>
+<td>16</td>
+<td>com.dollardays.testcases.EmailPreferencesValidationsTestCase@5a4aa2f2</td></tr>
+<tr>
+<td title='com.dollardays.testcases.Team2TaxExemptTestCase.ValidateTaxExemptRequiredFields()'><b>ValidateTaxExemptRequiredFields</b><br>Test class: com.dollardays.testcases.Team2TaxExemptTestCase<br>Parameters: {TaxID=, TestCase=Tax Exempt all required  fields empty , ExpiryDate=, filePath=, TCID=TC1, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=, DocumentName=xyz, TestScenario=Negative, State=, =}</td>
+<td></td>
+<td>19</td>
+<td>com.dollardays.testcases.Team2TaxExemptTestCase@f0f2775</td></tr>
+<tr>
+<td title='com.dollardays.testcases.Team2TaxExemptTestCase.ValidateTaxExemptRequiredFields()'><b>ValidateTaxExemptRequiredFields</b><br>Test class: com.dollardays.testcases.Team2TaxExemptTestCase<br>Parameters: {TaxID=0.0, TestCase=Except TaxID all required fields empty, ExpiryDate=, filePath=, TCID=TC2, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=, DocumentName=xyz, TestScenario=Negative, State=, =}</td>
+<td></td>
+<td>17</td>
+<td>com.dollardays.testcases.Team2TaxExemptTestCase@f0f2775</td></tr>
+<tr>
+<td title='com.dollardays.testcases.Team2TaxExemptTestCase.ValidateTaxExemptRequiredFields()'><b>ValidateTaxExemptRequiredFields</b><br>Test class: com.dollardays.testcases.Team2TaxExemptTestCase<br>Parameters: {TaxID=, TestCase=Except State all required fields empty, ExpiryDate=, filePath=, TCID=TC3, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=, DocumentName=xyz, TestScenario=Negative, State=Florida, =}</td>
+<td></td>
+<td>17</td>
+<td>com.dollardays.testcases.Team2TaxExemptTestCase@f0f2775</td></tr>
+<tr>
+<td title='com.dollardays.testcases.Team2TaxExemptTestCase.ValidateTaxExemptRequiredFields()'><b>ValidateTaxExemptRequiredFields</b><br>Test class: com.dollardays.testcases.Team2TaxExemptTestCase<br>Parameters: {TaxID=1.0, TestCase=Except TaxID and State all required fields empty , ExpiryDate=, filePath=, TCID=TC4, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=, DocumentName=xyz, TestScenario=Negative, State=Florida, =}</td>
+<td></td>
+<td>16</td>
+<td>com.dollardays.testcases.Team2TaxExemptTestCase@f0f2775</td></tr>
+<tr>
+<td title='com.dollardays.testcases.Team2TaxExemptTestCase.ValidateTaxExemptRequiredFields()'><b>ValidateTaxExemptRequiredFields</b><br>Test class: com.dollardays.testcases.Team2TaxExemptTestCase<br>Parameters: {TaxID=, TestCase=Except expiry date all required fields empty, ExpiryDate=08/19/2022, filePath=, TCID=TC5, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=, DocumentName=xyz, TestScenario=Negative, State=, =}</td>
+<td></td>
+<td>17</td>
+<td>com.dollardays.testcases.Team2TaxExemptTestCase@f0f2775</td></tr>
+<tr>
+<td title='com.dollardays.testcases.Team2TaxExemptTestCase.ValidateTaxExemptRequiredFields()'><b>ValidateTaxExemptRequiredFields</b><br>Test class: com.dollardays.testcases.Team2TaxExemptTestCase<br>Parameters: {TaxID=, TestCase=State and TaxId empty, ExpiryDate=09/19/2022, filePath=SampleJpg.jpg, TCID=TC6, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=correct, DocumentName=xyz, TestScenario=Negative, State=, =}</td>
+<td></td>
+<td>16</td>
+<td>com.dollardays.testcases.Team2TaxExemptTestCase@f0f2775</td></tr>
+<tr>
+<td title='com.dollardays.testcases.Team2TaxExemptTestCase.ValidateTaxExemptRequiredFields()'><b>ValidateTaxExemptRequiredFields</b><br>Test class: com.dollardays.testcases.Team2TaxExemptTestCase<br>Parameters: {TaxID=2.0, TestCase=Expiry date and State are empty, ExpiryDate=, filePath=SampleJpg.jpg, TCID=TC7, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=correct, DocumentName=xyz, TestScenario=Negative, State=, =}</td>
+<td></td>
+<td>16</td>
+<td>com.dollardays.testcases.Team2TaxExemptTestCase@f0f2775</td></tr>
+<tr>
+<td title='com.dollardays.testcases.Team2TaxExemptTestCase.ValidateTaxExemptRequiredFields()'><b>ValidateTaxExemptRequiredFields</b><br>Test class: com.dollardays.testcases.Team2TaxExemptTestCase<br>Parameters: {TaxID=3.0, TestCase=Tax exempt form all required fields are filled, ExpiryDate=08/19/2022, filePath=SampleJpg.jpg, TCID=TC8, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=correct, DocumentName=xyz, TestScenario=Positive, State=Iowa, =}</td>
+<td></td>
+<td>21</td>
+<td>com.dollardays.testcases.Team2TaxExemptTestCase@f0f2775</td></tr>
+<tr>
+<td title='com.dollardays.testcases.Team2TaxExemptTestCase.ValidateTaxExemptRequiredFields()'><b>ValidateTaxExemptRequiredFields</b><br>Test class: com.dollardays.testcases.Team2TaxExemptTestCase<br>Parameters: {TaxID=, TestCase=validate wrong file type, ExpiryDate=, filePath=TaxCertificate for DollarDays.txt, TCID=TC9, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=wrong, DocumentName=xyz, TestScenario=Negative, State=Florida, =}</td>
+<td></td>
+<td>15</td>
+<td>com.dollardays.testcases.Team2TaxExemptTestCase@f0f2775</td></tr>
+<tr>
+<td title='com.dollardays.testcases.DefaultPaymentMethodScript.VerifyCardVisible()'><b>VerifyCardVisible</b><br>Test class: com.dollardays.testcases.DefaultPaymentMethodScript<br>Parameters: {TestCase=VerifyCardVisible, Zip=98002, CCExpirymonth=05-May, TCID=TC2, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=999, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=true, =}</td>
+<td></td>
+<td>16</td>
+<td>com.dollardays.testcases.DefaultPaymentMethodScript@6591f517</td></tr>
+<tr>
+<td title='com.dollardays.testcases.DefaultPaymentMethodScript.VerifyClickAddNewCard()'><b>VerifyClickAddNewCard</b><br>Test class: com.dollardays.testcases.DefaultPaymentMethodScript<br>Parameters: {TestCase=VerifyClickAddNewCard, Zip=98002, CCExpirymonth=05-May, TCID=TC3, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=999, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=false, =}</td>
+<td></td>
+<td>16</td>
+<td>com.dollardays.testcases.DefaultPaymentMethodScript@6591f517</td></tr>
+<tr>
+<td title='com.dollardays.testcases.DefaultPaymentMethodScript.VerifyDCEditClick()'><b>VerifyDCEditClick</b><br>Test class: com.dollardays.testcases.DefaultPaymentMethodScript<br>Parameters: {TestCase=VerifyDCEditClick, Zip=98002, CCExpirymonth=05-May, TCID=TC1, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=999, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=True, =}</td>
+<td></td>
+<td>16</td>
+<td>com.dollardays.testcases.DefaultPaymentMethodScript@6591f517</td></tr>
+<tr>
+<td title='com.dollardays.testcases.DefaultPaymentMethodScript.VerifyDeleteCard()'><b>VerifyDeleteCard</b><br>Test class: com.dollardays.testcases.DefaultPaymentMethodScript<br>Parameters: {TestCase=VerifyEditOnCard, Zip=98002, CCExpirymonth=05-May, TCID=TC5, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=123, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=True, =}</td>
+<td></td>
+<td>22</td>
+<td>com.dollardays.testcases.DefaultPaymentMethodScript@6591f517</td></tr>
+<tr>
+<td title='com.dollardays.testcases.DefaultPaymentMethodScript.VerifyEditOnCard()'><b>VerifyEditOnCard</b><br>Test class: com.dollardays.testcases.DefaultPaymentMethodScript<br>Parameters: {TestCase=VerifyEditOnCard, Zip=98002, CCExpirymonth=05-May, TCID=TC5, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=123, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=True, =}</td>
+<td></td>
+<td>17</td>
+<td>com.dollardays.testcases.DefaultPaymentMethodScript@6591f517</td></tr>
+<tr>
+<td title='com.dollardays.testcases.DefaultPaymentMethodScript.VerifySetDefaultCard()'><b>VerifySetDefaultCard</b><br>Test class: com.dollardays.testcases.DefaultPaymentMethodScript<br>Parameters: {TestCase=VerifySetDefaultCard, Zip=98002, CCExpirymonth=05-May, TCID=TC4, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=999, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=true, =}</td>
+<td></td>
+<td>16</td>
+<td>com.dollardays.testcases.DefaultPaymentMethodScript@6591f517</td></tr>
+<tr>
+<td title='com.dollardays.testcases.EmailPreferencesValidationsTestCase.emailPreferences_Checkbox_Validation_AtPageLaunch()'><b>emailPreferences_Checkbox_Validation_AtPageLaunch</b><br>Test class: com.dollardays.testcases.EmailPreferencesValidationsTestCase<br>Parameters: {TestCase=emailPreferences_Checkbox_Validation_AtPageLaunch, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=EmailPreferences, ExpectedValue=true, UserName=srikanthtesting100@gmail.com, TCID=TC2, =}</td>
+<td></td>
+<td>14</td>
+<td>com.dollardays.testcases.EmailPreferencesValidationsTestCase@5a4aa2f2</td></tr>
+<tr>
+<td title='com.dollardays.testcases.EmailPreferencesValidationsTestCase.emailPreferences_UserEmailAddressValidation()'><b>emailPreferences_UserEmailAddressValidation</b><br>Test class: com.dollardays.testcases.EmailPreferencesValidationsTestCase<br>Parameters: {TestCase=emailPreferences_UserEmailAddressValidation, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=EmailPreferences, ExpectedValue=srikanthtesting100@gmail.com, UserName=srikanthtesting100@gmail.com, TCID=TC1, =}</td>
+<td></td>
+<td>14</td>
+<td>com.dollardays.testcases.EmailPreferencesValidationsTestCase@5a4aa2f2</td></tr>
+<tr>
+<td title='com.dollardays.testcases.EmailPreferencesValidationsTestCase.emailPreferences_checkbox_validation_AtClick()'><b>emailPreferences_checkbox_validation_AtClick</b><br>Test class: com.dollardays.testcases.EmailPreferencesValidationsTestCase<br>Parameters: {TestCase=emailPreferences_checkbox_validation_AtClick, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=EmailPreferences, ExpectedValue=false, UserName=srikanthtesting100@gmail.com, TCID=TC3, =}</td>
+<td></td>
+<td>33</td>
+<td>com.dollardays.testcases.EmailPreferencesValidationsTestCase@5a4aa2f2</td></tr>
+<tr>
+<td title='com.dollardays.testcases.EmailPreferencesValidationsTestCase.termAndConditionsPage_LinksValidation()'><b>termAndConditionsPage_LinksValidation</b><br>Test class: com.dollardays.testcases.EmailPreferencesValidationsTestCase<br>Parameters: {TestCase=termAndConditionsPage_LinksValidation, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=EmailPreferences, ExpectedValue=, UserName=srikanthtesting100@gmail.com, TCID=TC5, =}</td>
+<td></td>
+<td>21</td>
+<td>com.dollardays.testcases.EmailPreferencesValidationsTestCase@5a4aa2f2</td></tr>
+</table><p>
+</body>
+</html>
