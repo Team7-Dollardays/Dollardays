@@ -18,7 +18,7 @@ import com.dollardays.utilities.VideoRecorder_utlity;
 
 public class LogoutTestCase  extends BaseTest{
 
-	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "Logout",  testcaseID = "TC1", runmode = "Yes")
+	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "Logout",  testcaseID = "", runmode = "Yes")
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
 	public void invokeLogout(Hashtable<String, String> datatable) throws Exception{
 		String actualText = "";
@@ -46,7 +46,7 @@ public class LogoutTestCase  extends BaseTest{
 		Thread.sleep(300);
 		logoutPage.getSignOut().click();
 		js.executeScript("window.scrollBy(0,0)");
-		if(logoutPage.getsignIn() != null) {
+		if(logoutPage.getsignIn().size() != 0) {
 			actualText = "Logged out from user toggle button.";
 			expectedText = datatable.get("ExptectedResult").trim();
 		}
@@ -57,7 +57,7 @@ public class LogoutTestCase  extends BaseTest{
 			ExtentTestManager.getTest().log(Status.INFO, "Step3: Click on Log out link");
 			logoutPage.getLogOut().click();
 			Thread.sleep(300);
-			if(logoutPage.getsignIn() != null) {
+			if(logoutPage.getsignIn().size() != 0) {
 				actualText = "Logged out from Account web page.";
 				expectedText = datatable.get("ExptectedResult").trim();
 			}

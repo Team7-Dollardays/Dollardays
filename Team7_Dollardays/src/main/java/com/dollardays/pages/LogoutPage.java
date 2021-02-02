@@ -1,5 +1,7 @@
 package com.dollardays.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -45,8 +47,8 @@ public class LogoutPage {
 	
 	// Sign in button after log out 
 	@FindBy(xpath = "//span[normalize-space(.)='Sign in']")
-	private WebElement signIn;
-	public WebElement getsignIn() {
+	private List<WebElement> signIn;
+	public List<WebElement> getsignIn() {
 		return signIn;
 	}
 }
