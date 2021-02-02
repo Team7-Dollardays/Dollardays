@@ -1,135 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-21T21:14:23 EST" name="Suite" finished-at="2021-01-21T21:17:23 EST" duration-ms="179411">
+  <suite name="Suite" duration-ms="22478" started-at="2021-01-29T13:22:53 EST" finished-at="2021-01-29T13:23:16 EST">
     <groups>
     </groups>
-    <test started-at="2021-01-21T21:14:23 EST" name="Test" finished-at="2021-01-21T21:17:23 EST" duration-ms="179411">
-      <class name="com.dollardays.testcases.DefaultPaymentMethodScript">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:14:23 EST" name="beforeClass" finished-at="2021-01-21T21:14:23 EST" duration-ms="12" status="PASS">
+    <test name="Dollar Days Test" duration-ms="22478" started-at="2021-01-29T13:22:53 EST" finished-at="2021-01-29T13:23:16 EST">
+      <class name="com.dollardays.testcases.LoginTestcase">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.dollardays.testcases.LoginTestcase@7ff2a664]" name="beforeClass" is-config="true" duration-ms="75" started-at="2021-01-29T13:22:53 EST" finished-at="2021-01-29T13:22:53 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:14:24 EST" name="setUpBrowser" finished-at="2021-01-21T21:14:30 EST" duration-ms="6113" status="PASS">
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.LoginTestcase@7ff2a664]" name="setUpBrowser" is-config="true" duration-ms="6788" started-at="2021-01-29T13:22:54 EST" finished-at="2021-01-29T13:23:01 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method signature="VerifyDCEditClick(java.util.Hashtable)[pri:1, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:14:30 EST" name="VerifyDCEditClick" data-provider="dd-dataprovider" finished-at="2021-01-21T21:14:49 EST" duration-ms="18715" status="PASS">
+        <test-method status="PASS" signature="invokeLogin(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.LoginTestcase@7ff2a664]" name="invokeLogin" duration-ms="9219" started-at="2021-01-29T13:23:01 EST" data-provider="dd-dataprovider" finished-at="2021-01-29T13:23:10 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{TestCase=VerifyDCEditClick, Zip=98002, CCExpirymonth=05-May, TCID=TC1, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=999, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=True, =}]]>
+                <![CDATA[{TestCase=Valid Login Credentials, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=Login&Logout, UserName=srikanthtesting100@gmail.com, TCID=TC1}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyDCEditClick -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:14:49 EST" name="quit" finished-at="2021-01-21T21:14:50 EST" duration-ms="1297" status="PASS">
+        </test-method> <!-- invokeLogin -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.LoginTestcase@7ff2a664]" name="quit" is-config="true" duration-ms="5279" started-at="2021-01-29T13:23:10 EST" finished-at="2021-01-29T13:23:16 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:14:51 EST" name="setUpBrowser" finished-at="2021-01-21T21:14:57 EST" duration-ms="5800" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method signature="VerifyCardVisible(java.util.Hashtable)[pri:2, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:14:57 EST" name="VerifyCardVisible" data-provider="dd-dataprovider" finished-at="2021-01-21T21:15:14 EST" duration-ms="17361" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{TestCase=VerifyCardVisible, Zip=98002, CCExpirymonth=05-May, TCID=TC2, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=999, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=true, =}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyCardVisible -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:15:14 EST" name="quit" finished-at="2021-01-21T21:15:15 EST" duration-ms="1216" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:15:15 EST" name="setUpBrowser" finished-at="2021-01-21T21:15:23 EST" duration-ms="7374" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method signature="VerifyClickAddNewCard(java.util.Hashtable)[pri:3, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:15:23 EST" name="VerifyClickAddNewCard" data-provider="dd-dataprovider" finished-at="2021-01-21T21:15:42 EST" duration-ms="19464" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{TestCase=VerifyClickAddNewCard, Zip=98002, CCExpirymonth=05-May, TCID=TC3, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=999, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=false, =}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyClickAddNewCard -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:15:42 EST" name="quit" finished-at="2021-01-21T21:15:43 EST" duration-ms="1171" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:15:44 EST" name="setUpBrowser" finished-at="2021-01-21T21:16:03 EST" duration-ms="19758" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method signature="VerifySetDefaultCard(java.util.Hashtable)[pri:4, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:16:03 EST" name="VerifySetDefaultCard" data-provider="dd-dataprovider" finished-at="2021-01-21T21:16:22 EST" duration-ms="18303" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{TestCase=VerifySetDefaultCard, Zip=98002, CCExpirymonth=05-May, TCID=TC4, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=999, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=true, =}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifySetDefaultCard -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:16:22 EST" name="quit" finished-at="2021-01-21T21:16:23 EST" duration-ms="1219" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:16:23 EST" name="setUpBrowser" finished-at="2021-01-21T21:16:28 EST" duration-ms="5084" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method signature="VerifyEditOnCard(java.util.Hashtable)[pri:5, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:16:28 EST" name="VerifyEditOnCard" data-provider="dd-dataprovider" finished-at="2021-01-21T21:16:47 EST" duration-ms="19094" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{TestCase=VerifyEditOnCard, Zip=98002, CCExpirymonth=05-May, TCID=TC5, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=123, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=True, =}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyEditOnCard -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:16:47 EST" name="quit" finished-at="2021-01-21T21:16:53 EST" duration-ms="5093" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:16:53 EST" name="setUpBrowser" finished-at="2021-01-21T21:16:58 EST" duration-ms="5681" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method signature="VerifyDeleteCard(java.util.Hashtable)[pri:6, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:16:59 EST" name="VerifyDeleteCard" data-provider="dd-dataprovider" finished-at="2021-01-21T21:17:21 EST" duration-ms="22795" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{TestCase=VerifyEditOnCard, Zip=98002, CCExpirymonth=05-May, TCID=TC5, SheetName=Default_PM, CCHolder=Mr.John, Runmode=Yes, CCExpiryYear=2021, CCV=123, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, City=Newyork, State=Washington, Address1=123 Ave SE, CCNumber=1234123412341234, ExpectedValue=True, =}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyDeleteCard -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:17:21 EST" name="quit" finished-at="2021-01-21T21:17:23 EST" duration-ms="1256" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.dollardays.testcases.DefaultPaymentMethodScript@1c5920df]" started-at="2021-01-21T21:17:23 EST" name="afterClass" finished-at="2021-01-21T21:17:23 EST" duration-ms="0" status="PASS">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.dollardays.testcases.LoginTestcase@7ff2a664]" name="afterClass" is-config="true" duration-ms="0" started-at="2021-01-29T13:23:16 EST" finished-at="2021-01-29T13:23:16 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.dollardays.testcases.DefaultPaymentMethodScript -->
-    </test> <!-- Test -->
+      </class> <!-- com.dollardays.testcases.LoginTestcase -->
+    </test> <!-- Dollar Days Test -->
   </suite> <!-- Suite -->
 </testng-results>

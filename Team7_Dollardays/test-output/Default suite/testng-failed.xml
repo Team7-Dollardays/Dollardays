@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.dollardays.testcases.Team2TaxExemptTestCase">
+      <class name="com.dollardays.testcases.SubmitRequestTest">
         <methods>
-          <include name="ValidateTaxExemptRequiredFields" invocation-numbers="0 1"/>
+          <include name="validate_SubmitRequest_EmailFieldRequired" invocation-numbers="0"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
           <include name="quit"/>
           <include name="setUpBrowser"/>
         </methods>
-      </class> <!-- com.dollardays.testcases.Team2TaxExemptTestCase -->
+      </class> <!-- com.dollardays.testcases.SubmitRequestTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
