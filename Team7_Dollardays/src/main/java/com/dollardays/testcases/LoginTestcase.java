@@ -17,7 +17,7 @@ import com.dollardays.utilities.VideoRecorder_utlity;
 
 public class LoginTestcase extends BaseTest{
 
-	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "Login&Logout",  testcaseID = "TC1", runmode = "Yes")
+	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "Login",  testcaseID = "TC1", runmode = "Yes")
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
 	public void invokeLogin(Hashtable<String, String> datatable) throws Exception{
 		VideoRecorder_utlity.startRecord("GoogleTestRecording");//Starting point of video recording
