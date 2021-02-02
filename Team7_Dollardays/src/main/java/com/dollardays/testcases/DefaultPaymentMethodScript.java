@@ -1,10 +1,10 @@
 package com.dollardays.testcases;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import com.dollardays.commons.Base64;
 import com.dollardays.listners.ExtentTestManager;

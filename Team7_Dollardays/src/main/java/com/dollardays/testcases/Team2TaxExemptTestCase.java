@@ -1,14 +1,14 @@
 package com.dollardays.testcases;
 
-import java.io.IOException;
+///import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.util.Hashtable;
 
-import org.openqa.selenium.By;
+//import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.dollardays.utilities.PropertyUtil;
+//import com.dollardays.utilities.PropertyUtil;
 import com.aventstack.extentreports.Status;
 import com.dollardays.commons.Base64;
 import com.dollardays.listners.ExtentTestManager;
@@ -18,8 +18,8 @@ import com.dollardays.utilities.DDDataProvider;
 import com.dollardays.utilities.TestUtil;
 
 public class Team2TaxExemptTestCase extends BaseTest {
-	private static int OUTPUT_ROW_START = 0;
-	private static final String UPLOAD_FOLDER_PATH = "uploadFolderPath";
+	//private static int OUTPUT_ROW_START = 0;
+	//private static final String UPLOAD_FOLDER_PATH = "uploadFolderPath";
 	private static String filetype;
 
 	@DDDataProvider(datafile = "testdata/Team2Data_AccontPage.xlsx", sheetName = "TaxExempt", testcaseID = "", runmode = "Yes")
@@ -50,7 +50,7 @@ public class Team2TaxExemptTestCase extends BaseTest {
 			taxExemptpage.getAccount_TaxExemptTaxid().sendKeys((datatable.get("TaxID")));
 			ExtentTestManager.getTest().log(Status.INFO, "User entered Tax ID. " + "Tax ID:" + datatable.get("TaxID"));
 		}
-		// sending State from excel sheet.
+		// Sending State from excel sheet.
 		if ((datatable.get("State") != null && !(datatable.get("State").equals("")))) {
 			taxExemptpage.getAccount_TaxExemptStatedpdown().sendKeys((datatable.get("State")));
 			ExtentTestManager.getTest().log(Status.INFO, "User entered State. " + "State:" + datatable.get("State"));
@@ -139,7 +139,7 @@ public class Team2TaxExemptTestCase extends BaseTest {
 			ExtentTestManager.getTest().log(Status.FAIL, "Error message: " + e.getMessage());
 		}
 
-		OUTPUT_ROW_START++;
+	//	OUTPUT_ROW_START++;
 		loginPage.getUserDrodown().click();
 		Thread.sleep(1000);
 		loginPage.getLogoutBtn().click();

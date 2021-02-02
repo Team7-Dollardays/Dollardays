@@ -2,7 +2,7 @@ package com.dollardays.testcases;
 
 import org.testng.annotations.Test;
 
-import com.dollardays.pages.Examle;
+//import com.dollardays.pages.Examle;
 
 public class ExamleTestcase extends BaseTest{
 

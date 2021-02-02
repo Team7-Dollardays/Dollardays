@@ -84,10 +84,10 @@ public class SearchTestcase extends BaseTest{
 		Thread.sleep(1000);
 		SearchPage searchpage = new SearchPage(driver);
 		searchpage.getSearchBar().sendKeys("backpack");
-		ExtentTestManager.getTest().log(Status.PASS, "Step 2  : Enter search data in the search bar");
+		ExtentTestManager.getTest().log(Status.PASS, "Step 2  : Enter search data in the search bar.");
 		
 		searchpage.getsearchBtn().click();
-		ExtentTestManager.getTest().log(Status.PASS, "Step 3  : clicked on the search button");
+		ExtentTestManager.getTest().log(Status.PASS, "Step 3  : clicked on the search button.");
 		Thread.sleep(500);
 		try {
 			

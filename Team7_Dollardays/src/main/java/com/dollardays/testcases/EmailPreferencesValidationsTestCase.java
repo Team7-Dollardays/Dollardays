@@ -406,8 +406,8 @@ public class EmailPreferencesValidationsTestCase extends BaseTest {
 		// Validating "service@dollardays.com" link
 		// logger.info("Test 5:Validating Services@dollardays.com");
 		List<WebElement> linkElements = MyProfilePage.ServicesADDDotCom_links;
-		int n = 8;
-		for (int i = 0; i < linkElements.size(); i++, n++) { // ExpectedValue="mailto:service@dollardays.com";
+	//	int n = 8;
+		for (int i = 0; i < linkElements.size(); i++) { // ExpectedValue="mailto:service@dollardays.com";
 			ExpectedValue = "mailto:service@dollardays.com";
 			ActualValue = linkElements.get(i).getAttribute("href");
 			try {

@@ -3,7 +3,7 @@ package com.dollardays.testcases;
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
 public class MT {
 	public static Logger APPLICATION_LOGS = Logger.getLogger(MT.class);

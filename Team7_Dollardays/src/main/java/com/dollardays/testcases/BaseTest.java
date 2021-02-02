@@ -144,7 +144,7 @@ public class BaseTest extends MT {
 		ExtentTestManager.getTest().log(Status.INFO, "Search and open Product description page.");
 		SearchPage searchpage = new SearchPage(driver);
 		Thread.sleep(1000);
-		searchpage.getSearchBar().sendKeys("backpack");// li[contains(text(),'SKU #2344871')]
+		searchpage.getSearchBar().sendKeys("backpack");
 		Thread.sleep(1000);
 		searchpage.getsearchBtn().click();
 		Thread.sleep(1000);
