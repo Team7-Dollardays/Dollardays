@@ -42,4 +42,11 @@ public class LogoutPage {
 	public WebElement getLogOut() {
 		return logOut;
 	}
+	
+	// Sign in button after log out 
+	@FindBy(xpath = "//span[normalize-space(.)='Sign in']")
+	private WebElement signIn;
+	public WebElement getsignIn() {
+		return signIn;
+	}
 }
