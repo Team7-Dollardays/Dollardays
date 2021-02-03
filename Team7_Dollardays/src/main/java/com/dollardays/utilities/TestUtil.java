@@ -55,8 +55,8 @@ public class TestUtil {
 		Xls_Reader xlsData = new Xls_Reader(file, sheetName);
 		Object[][] data = null;
 		Hashtable<String, String> datatable = null;	
-		System.out.println("rowcount"+xlsData.getRowCount(sheetName));
-		System.out.println("\n colcount"+xlsData.getColumnCount(sheetName));
+		System.out.println("rowcount="+(xlsData.getRowCount(sheetName)-1));
+		System.out.println("colcount="+xlsData.getColumnCount(sheetName));
 		
 		if(testName !=null && !testName.isEmpty())
 		{
@@ -74,9 +74,11 @@ public class TestUtil {
 			if (testStartRow >= 0){
 				datatable = new Hashtable<String, String>();
 				datatable.put("SheetName", sheetName);
+				System.out.println("Row1 =");
 				for(int col = 0; col < xlsData.getColumnCount(sheetName); col++) {
 					datatable.put(xlsData.getCellData(sheetName, col, 1), xlsData.getCellData(sheetName, col, testStartRow));
-					System.out.print(xlsData.getCellData(sheetName, col, testStartRow) +" ");
+					System.out.print(xlsData.getCellData(sheetName, col, testStartRow));
+					System.out.print(",");
 				}
 				/* It will put the Data into the Table for Each row and then 
 				 * put the table inside the Two dimensional Array
@@ -112,10 +114,11 @@ public class TestUtil {
 					
 						datatable = new Hashtable<String, String>();
 						datatable.put("SheetName", sheetName);
+						System.out.print("TestCase/Row" + (rNum-1) + "=");
 						for(int col = 0; col < xlsData.getColumnCount(sheetName); col++) 
 						{
 						   datatable.put(xlsData.getCellData(sheetName, col, 1), xlsData.getCellData(sheetName, col,rNum ));
-						   System.out.print(xlsData.getCellData(sheetName, col,rNum ) +" ");
+						   System.out.print(xlsData.getCellData(sheetName, col,rNum ) +",");
 				        }
 				      /* It will put the Data into the Table for Each row and then 
 				       put the table inside the Two dimensional Array

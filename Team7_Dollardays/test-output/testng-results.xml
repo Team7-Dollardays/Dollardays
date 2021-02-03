@@ -1,135 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="132969" started-at="2021-02-02T19:08:48 EST" finished-at="2021-02-02T19:11:01 EST">
+  <suite name="LogoutSuite" duration-ms="41071" started-at="2021-02-03T18:35:58 EST" finished-at="2021-02-03T18:36:39 EST">
     <groups>
     </groups>
-    <test name="Submit Request Test" duration-ms="132969" started-at="2021-02-02T19:08:48 EST" finished-at="2021-02-02T19:11:01 EST">
-      <class name="com.dollardays.testcases.SubmitRequestTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="beforeClass" is-config="true" duration-ms="13" started-at="2021-02-02T19:08:48 EST" finished-at="2021-02-02T19:08:48 EST">
+    <test name="Test" duration-ms="41071" started-at="2021-02-03T18:35:58 EST" finished-at="2021-02-03T18:36:39 EST">
+      <class name="com.dollardays.testcases.LogoutTestCase">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="beforeClass" is-config="true" duration-ms="12" started-at="2021-02-03T18:35:58 EST" finished-at="2021-02-03T18:35:58 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="setUpBrowser" is-config="true" duration-ms="7425" started-at="2021-02-02T19:08:49 EST" finished-at="2021-02-02T19:08:56 EST">
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="setUpBrowser" is-config="true" duration-ms="6125" started-at="2021-02-03T18:35:59 EST" finished-at="2021-02-03T18:36:05 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="validate_SubmitRequest_WebPage(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="validate_SubmitRequest_WebPage" duration-ms="12876" started-at="2021-02-02T19:08:56 EST" data-provider="dd-dataprovider" finished-at="2021-02-02T19:09:09 EST">
+        <test-method status="PASS" signature="invokeLogout(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="invokeLogout" duration-ms="9127" started-at="2021-02-03T18:36:05 EST" data-provider="dd-dataprovider" finished-at="2021-02-03T18:36:14 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Message=, Password=cGFzc3dvcmQxMjM=, PageURL=https://www.dollardays.com/case.aspx, CaptchaValidationMsg=, HeaderTitle=, OrderNo=, PageDescription=, UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=Validate - Submit a Request web page is loading, TestCaseType=Positive, Email=, TestScenario=NonCaptcha, TCID=TC1, SheetName=SubmitRequest}]]>
+                <![CDATA[{ExptectedResult=Logged out from user toggle button., TestCase=Logout from user toggle button, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=Logout, UserName=srikanthtesting100@gmail.com, TCID=TC1}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validate_SubmitRequest_WebPage -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="quit" is-config="true" duration-ms="1149" started-at="2021-02-02T19:09:09 EST" finished-at="2021-02-02T19:09:10 EST">
+        </test-method> <!-- invokeLogout -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="quit" is-config="true" duration-ms="5053" started-at="2021-02-03T18:36:14 EST" finished-at="2021-02-03T18:36:19 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="setUpBrowser" is-config="true" duration-ms="4866" started-at="2021-02-02T19:09:10 EST" finished-at="2021-02-02T19:09:15 EST">
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="setUpBrowser" is-config="true" duration-ms="5176" started-at="2021-02-03T18:36:19 EST" finished-at="2021-02-03T18:36:24 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="validate_SubmitRequest_WebPage(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="validate_SubmitRequest_WebPage" duration-ms="14417" started-at="2021-02-02T19:09:15 EST" data-provider="dd-dataprovider" finished-at="2021-02-02T19:09:29 EST">
+        <test-method status="PASS" signature="invokeLogout(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="invokeLogout" duration-ms="9949" started-at="2021-02-03T18:36:24 EST" data-provider="dd-dataprovider" finished-at="2021-02-03T18:36:34 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Message=, Password=cGFzc3dvcmQxMjM=, PageURL=, CaptchaValidationMsg=, HeaderTitle=Submit A Request, OrderNo=, PageDescription=, UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=Verify Page header title - 'Submit a Request' should display, TestCaseType=Positive, Email=, TestScenario=NonCaptcha, TCID=TC2, SheetName=SubmitRequest}]]>
+                <![CDATA[{ExptectedResult=Logged out from Account web page., TestCase=Logout from User Account Page, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=Logout, UserName=srikanthtesting100@gmail.com, TCID=TC2}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validate_SubmitRequest_WebPage -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="quit" is-config="true" duration-ms="4899" started-at="2021-02-02T19:09:29 EST" finished-at="2021-02-02T19:09:34 EST">
+        </test-method> <!-- invokeLogout -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="quit" is-config="true" duration-ms="4953" started-at="2021-02-03T18:36:34 EST" finished-at="2021-02-03T18:36:39 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="setUpBrowser" is-config="true" duration-ms="5562" started-at="2021-02-02T19:09:34 EST" finished-at="2021-02-02T19:09:40 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="validate_SubmitRequest_WebPage(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="validate_SubmitRequest_WebPage" duration-ms="13515" started-at="2021-02-02T19:09:40 EST" data-provider="dd-dataprovider" finished-at="2021-02-02T19:09:53 EST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Message=, Password=cGFzc3dvcmQxMjM=, PageURL=, CaptchaValidationMsg=, HeaderTitle=, OrderNo=, PageDescription=We’re here to help you! Please provide us with as much information as possible in the fields below. The more detailed your request, the faster our Customer Care Team will be able to assist you., UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=Verify page header message - 'We’re here to help you!...' Should display , TestCaseType=Positive, Email=, TestScenario=NonCaptcha, TCID=TC3, SheetName=SubmitRequest}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_SubmitRequest_WebPage -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="quit" is-config="true" duration-ms="4858" started-at="2021-02-02T19:09:53 EST" finished-at="2021-02-02T19:09:58 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="setUpBrowser" is-config="true" duration-ms="4685" started-at="2021-02-02T19:09:58 EST" finished-at="2021-02-02T19:10:03 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="validate_SubmitRequest_WebPage(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="validate_SubmitRequest_WebPage" duration-ms="12436" started-at="2021-02-02T19:10:03 EST" data-provider="dd-dataprovider" finished-at="2021-02-02T19:10:15 EST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Message=, Password=cGFzc3dvcmQxMjM=, PageURL=, CaptchaValidationMsg=, HeaderTitle=, OrderNo=, PageDescription=, UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=Validate all links are working, TestCaseType=Positive, Email=, TestScenario=NonCaptcha, TCID=TC4, SheetName=SubmitRequest}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_SubmitRequest_WebPage -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="quit" is-config="true" duration-ms="4928" started-at="2021-02-02T19:10:15 EST" finished-at="2021-02-02T19:10:20 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="setUpBrowser" is-config="true" duration-ms="4718" started-at="2021-02-02T19:10:20 EST" finished-at="2021-02-02T19:10:25 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="validate_SubmitRequest_WebPage(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="validate_SubmitRequest_WebPage" duration-ms="12502" started-at="2021-02-02T19:10:25 EST" data-provider="dd-dataprovider" finished-at="2021-02-02T19:10:38 EST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Message=, Password=cGFzc3dvcmQxMjM=, PageURL=, CaptchaValidationMsg=, HeaderTitle=, OrderNo=, PageDescription=, UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=user name should display in email field as page loads, TestCaseType=Positive, Email=srikanthtesting100@gmail.com, TestScenario=NonCaptcha, TCID=TC5, SheetName=SubmitRequest}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_SubmitRequest_WebPage -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="quit" is-config="true" duration-ms="4959" started-at="2021-02-02T19:10:38 EST" finished-at="2021-02-02T19:10:43 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="setUpBrowser" is-config="true" duration-ms="4635" started-at="2021-02-02T19:10:43 EST" finished-at="2021-02-02T19:10:47 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="validate_SubmitRequest_WebPage(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="validate_SubmitRequest_WebPage" duration-ms="12738" started-at="2021-02-02T19:10:47 EST" data-provider="dd-dataprovider" finished-at="2021-02-02T19:11:00 EST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Message=, Password=cGFzc3dvcmQxMjM=, PageURL=, CaptchaValidationMsg=Captcha validation is required., HeaderTitle=, OrderNo=, PageDescription=, UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=Not checked Captcha and click on Submit button, TestCaseType=Negative, Email=, TestScenario=NonCaptcha, TCID=TC6, SheetName=SubmitRequest}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_SubmitRequest_WebPage -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="quit" is-config="true" duration-ms="1057" started-at="2021-02-02T19:11:00 EST" finished-at="2021-02-02T19:11:01 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.dollardays.testcases.SubmitRequestTest@b7f23d9]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-02-02T19:11:01 EST" finished-at="2021-02-02T19:11:01 EST">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-02-03T18:36:39 EST" finished-at="2021-02-03T18:36:39 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.dollardays.testcases.SubmitRequestTest -->
-    </test> <!-- Submit Request Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.dollardays.testcases.LogoutTestCase -->
+    </test> <!-- Test -->
+  </suite> <!-- LogoutSuite -->
 </testng-results>

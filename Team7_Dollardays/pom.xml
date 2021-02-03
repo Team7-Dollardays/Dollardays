@@ -5,7 +5,7 @@
 	<groupId>DollarDays</groupId>
 	<artifactId>c</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>DollarDays_30Aug</name>
+	<name>DollarDays_Jan2021</name>
 
 	<build>
 		<plugins>
@@ -51,14 +51,6 @@
 			<version>0.7.7.0</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
-		<dependency>
-			<groupId>com.relevantcodes</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>2.41.2</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -117,12 +109,6 @@
 		</dependency>
 		<!-- testng dependencies added new -->
 
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
-			<scope>compile</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>

@@ -20,7 +20,7 @@ public class TestListener implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 		System.out.println(("*** Running test method " + result.getMethod().getMethodName() + "..."));
-		ExtentTestManager.startTest(result.getMethod().getMethodName());
+	 //   ExtentTestManager.startTest(result.getMethod().getMethodName());
 	}
 
 	public void onTestSuccess(ITestResult result) {
