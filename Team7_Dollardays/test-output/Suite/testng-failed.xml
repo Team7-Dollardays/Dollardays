@@ -4,17 +4,17 @@
   <listeners>
     <listener class-name="com.dollardays.listners.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Dollar Days Test(failed)">
+  <test thread-count="5" name="Submit Request Test(failed)">
     <classes>
-      <class name="com.dollardays.testcases.LoginTestcase">
+      <class name="com.dollardays.testcases.SubmitRequestTest">
         <methods>
           <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="invokeLogin" invocation-numbers="0"/>
+          <include name="validate_SubmitRequest_WebPage" invocation-numbers="0 1 2 3 4"/>
           <include name="quit"/>
           <include name="setUpBrowser"/>
         </methods>
-      </class> <!-- com.dollardays.testcases.LoginTestcase -->
+      </class> <!-- com.dollardays.testcases.SubmitRequestTest -->
     </classes>
-  </test> <!-- Dollar Days Test(failed) -->
+  </test> <!-- Submit Request Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
