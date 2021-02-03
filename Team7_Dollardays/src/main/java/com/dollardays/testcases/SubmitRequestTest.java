@@ -30,7 +30,7 @@ public class SubmitRequestTest extends BaseTest{
 	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "SubmitRequest",  testcaseID = "", runmode = "Yes")
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
 	public void validate_SubmitRequest_WebPage(Hashtable<String, String> datatable) throws Exception{
-		VideoRecorder_utlity.startRecord("GoogleTestRecording");//Starting point of video recording
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		if((datatable.get("TestScenario").equalsIgnoreCase("nonCaptcha")))
 		{
 		String emailErrMs = "Email should not be blank !";
@@ -42,22 +42,22 @@ public class SubmitRequestTest extends BaseTest{
 		String expectedText = "";
 		
 		System.out.println(datatable.get("TestCase"));
-		ExtentTestManager.getTest().log(Status.INFO,
+		ExtentTestManager.getTest().log(Status.PASS,
 				"Testcase: " + (datatable.get("TCID")) + "-----" + (datatable.get("TestCase")));
 		
 		// Creating Object of Login Page  to login into dollar days
 		LoginPage loginPage = new LoginPage(driver);
-		ExtentTestManager.getTest().log(Status.INFO, "Step1: Login into DollarDays.");
+		ExtentTestManager.getTest().log(Status.PASS, "Step1: Login into DollarDays.");
 		loginPage.login(datatable.get("UserName"), Base64.decrypt(datatable.get("Password")));	
 
 		// Creating Object of SubmitPage to access Web Elements of 'https://www.dollardays.com/case.aspx'
 		SubmitRequestPage submitPage = new SubmitRequestPage(driver);
 	
-		ExtentTestManager.getTest().log(Status.INFO, "Step2: Click on User Icon to open User Dropdown Toggle.");
+		ExtentTestManager.getTest().log(Status.PASS, "Step2: Click on User Icon to open User Dropdown Toggle.");
 		submitPage.getUserDropdownToggle().click();
 		
 		// Navigate to 'Submit a Request' page
-		ExtentTestManager.getTest().log(Status.INFO, "Step3: Click on 'Submit a Request' Link.");
+		ExtentTestManager.getTest().log(Status.PASS, "Step3: Click on 'Submit a Request' Link.");
 		submitPage.getUserDropdownToggleSubmitRequestLink().click();;
 		
 		// Verify if page is loaded successfully 
@@ -67,12 +67,12 @@ public class SubmitRequestTest extends BaseTest{
 		if ((datatable.get("PageURL") != null && !(datatable.get("PageURL").equals("")))) {
 			actualText = driver.getCurrentUrl();
 			expectedText = "https://www.dollardays.com/case.aspx";
-			ExtentTestManager.getTest().log(Status.INFO, "User entered Email. " + "Email ID:" + datatable.get("Email"));
+			ExtentTestManager.getTest().log(Status.PASS, "User entered Email. " + "Email ID:" + datatable.get("Email"));
 		}
 		
 		if ((datatable.get("CaptchaValidationMsg") != null && !(datatable.get("CaptchaValidationMsg").equals("")))) {
 			expectedText = captchaErrMsg;
-			ExtentTestManager.getTest().log(Status.INFO, "User entered Email. " + "Email ID:" + datatable.get("CaptchaValidationMsg"));
+			ExtentTestManager.getTest().log(Status.PASS, "User entered Email. " + "Email ID:" + datatable.get("CaptchaValidationMsg"));
 		}
 		
 		// Clear Email Id Field then Enter Email id
@@ -81,13 +81,13 @@ public class SubmitRequestTest extends BaseTest{
 			{
 				submitPage.getEmailtxtBox().clear();
 				submitPage.getEmailtxtBox().sendKeys(datatable.get("Email").trim());
-				ExtentTestManager.getTest().log(Status.INFO, "User entered Email. " + "Email ID:" + datatable.get("Email"));
+				ExtentTestManager.getTest().log(Status.PASS, "User entered Email. " + "Email ID:" + datatable.get("Email"));
 			}
 			else
 			{
 				actualText = submitPage.getEmailtxtBox().getAttribute("value").trim();
 				expectedText = (datatable.get("Email")).trim();
-				ExtentTestManager.getTest().log(Status.INFO, "Verify Email Textbox. " + "Given Email ID:" + datatable.get("Email"));
+				ExtentTestManager.getTest().log(Status.PASS, "Verify Email Textbox. " + "Given Email ID:" + datatable.get("Email"));
 			}
 		}
 		
@@ -98,47 +98,47 @@ public class SubmitRequestTest extends BaseTest{
 		// enter phone no.
 		if ((datatable.get("Phone") != null && !(datatable.get("Phone").equals("")))) {
 			submitPage.getPhonetxtBox().sendKeys(datatable.get("Phone").trim());
-			ExtentTestManager.getTest().log(Status.INFO, "User entered Phone. " + "Phone:" + datatable.get("Phone"));
+			ExtentTestManager.getTest().log(Status.PASS, "User entered Phone. " + "Phone:" + datatable.get("Phone"));
 		}
 		
 		// Set Request Type drop down value
 		if ((datatable.get("RequestType") != null && !(datatable.get("RequestType").equals("")))) {
 			Select requestTypedropDown = new Select(submitPage.getRequestTypeDropDown());
 			requestTypedropDown.selectByVisibleText(datatable.get("RequestType").trim());
-			ExtentTestManager.getTest().log(Status.INFO, "User entered RequestType. " + "RequestType:" + datatable.get("RequestType"));
+			ExtentTestManager.getTest().log(Status.PASS, "User entered RequestType. " + "RequestType:" + datatable.get("RequestType"));
 		}
 		
 		// Enter Order No.
 		if ((datatable.get("OrderNo") != null && !(datatable.get("OrderNo").equals("")))) {
 			submitPage.getOrderNotxtBox().sendKeys(datatable.get("OrderNo").trim());
-			ExtentTestManager.getTest().log(Status.INFO, "User entered OrderNo. " + "OrderNo:" + datatable.get("OrderNo"));
+			ExtentTestManager.getTest().log(Status.PASS, "User entered OrderNo. " + "OrderNo:" + datatable.get("OrderNo"));
 		}
 		
 		// Enter Message Text area
 		if ((datatable.get("Message") != null && !(datatable.get("Message").equals("")))) {
 			submitPage.getMessagetxtArea().sendKeys(datatable.get("Message").trim());
-			ExtentTestManager.getTest().log(Status.INFO, "User entered Message. " + "Message:" + datatable.get("Message"));
+			ExtentTestManager.getTest().log(Status.PASS, "User entered Message. " + "Message:" + datatable.get("Message"));
 		}
 		
 		//Verify page header title
 		if ((datatable.get("HeaderTitle") != null && !(datatable.get("HeaderTitle").equals("")))) {
 			actualText = submitPage.getpageHeaderTitle().getText().trim();
 			expectedText = datatable.get("HeaderTitle").trim();
-			ExtentTestManager.getTest().log(Status.INFO, "Get Page header Title" + "Title:" + datatable.get("HeaderTitle"));
+			ExtentTestManager.getTest().log(Status.PASS, "Get Page header Title" + "Title:" + datatable.get("HeaderTitle"));
 		}
 		
 		//Verify page header message
 		if ((datatable.get("PageDescription") != null && !(datatable.get("PageDescription").equals("")))) {
 			actualText = submitPage.getpageHeaderMsg().getText().trim();
 			expectedText = datatable.get("PageDescription").trim();
-			ExtentTestManager.getTest().log(Status.INFO, "Get Page Header Message. " + "Message:" + datatable.get("PageDescription"));
+			ExtentTestManager.getTest().log(Status.PASS, "Get Page Header Message. " + "Message:" + datatable.get("PageDescription"));
 		}
 		
 		// Set Captcha
 		if((datatable.get("TestScenario").equalsIgnoreCase("Captcha")))
 		{
 			Thread.sleep(1000);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
+			
 			// This  will scroll down the page by  1000 pixel vertical		
 			js.executeScript("window.scrollBy(0,500)");
 			Thread.sleep(1000);
@@ -146,10 +146,10 @@ public class SubmitRequestTest extends BaseTest{
 			submitPage.getCaptchaDiv().click();
 		//	js.executeScript("arguments[0].setAttribute('style', 'background: grey; border: 2px solid black;');", submitPage.getCaptchaDiv());
 			Thread.sleep(80000);
-			ExtentTestManager.getTest().log(Status.INFO, "Checked Captcha");
+			ExtentTestManager.getTest().log(Status.PASS, "Checked Captcha");
 			// Click on Submit
 			submitPage.getSubmitBtn().click();
-			ExtentTestManager.getTest().log(Status.INFO, "Clicked on Submit.");
+			ExtentTestManager.getTest().log(Status.PASS, "Clicked on Submit.");
 			
 			Thread.sleep(3000);
 			if ((datatable.get("TestCaseType").equals("Negative"))) {
@@ -161,11 +161,11 @@ public class SubmitRequestTest extends BaseTest{
 					actualText += errMsg.getText();
 				}
 				
-				ExtentTestManager.getTest().log(Status.INFO, "Step 6: User gets error messages for required fields.");
+				ExtentTestManager.getTest().log(Status.PASS, "Step 6: User gets error messages for required fields.");
 			} else {
 				actualText = submitPage.getSubmitRequestSuccessMsg().getText();
 				expectedText = successMsg;
-				ExtentTestManager.getTest().log(Status.INFO, "Step 6: User clicked 'Submit' button and gets Success Message");
+				ExtentTestManager.getTest().log(Status.PASS, "Step 6: User clicked 'Submit' button and gets Success Message");
 			}		
 			
 			
@@ -196,25 +196,27 @@ public class SubmitRequestTest extends BaseTest{
 		try {
 			System.out.println("Actual Text : " + actualText);
 			System.out.println("Expected Text: " + expectedText);
-			Assert.assertEquals(actualText, expectedText);
-			ExtentTestManager.getTest().log(Status.PASS, " Actual and expected messages match");
+			Assert.assertEquals(actualText.trim(), expectedText.trim());
+			ExtentTestManager.getTest().log(Status.PASS,"Test Case : " + (datatable.get("TestCase")) +" is executed successfully.");
 			
 		} catch (AssertionError e) {
 			ExtentTestManager.getTest().log(Status.FAIL, " Actual and expected messages mis match");
 			ExtentTestManager.getTest().log(Status.FAIL, "Error message: " + e.getMessage());
 			Assert.assertEquals("true","false");
 		}
-		ExtentTestManager.getTest().log(Status.INFO, "Actual text:" + actualText);
-		ExtentTestManager.getTest().log(Status.INFO, "Expected text:" + expectedText);
+		ExtentTestManager.getTest().log(Status.INFO, "Actual Result:" + actualText);
+		ExtentTestManager.getTest().log(Status.INFO, "Expected Result:" + expectedText);
 		
 		
 
 		// Log out
 		loginPage.getUserDrodown().click();
 		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(1000);
 		loginPage.getLogoutBtn().click();
 		ExtentTestManager.getTest().log(Status.PASS, "Step 7: Clicked on LogOut");
-		VideoRecorder_utlity.stopRecord();//End point of video recording
+		
 		}
 	}
 }
