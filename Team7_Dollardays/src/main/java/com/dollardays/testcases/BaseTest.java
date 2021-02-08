@@ -36,7 +36,7 @@ public class BaseTest extends MT {
 		try {
 
 			fileInputStream = new FileInputStream(
-					System.getProperty("user.dir") + "\\src\\main\\resources\\application.proerties");
+					System.getProperty("user.dir") + "\\src\\main\\resources\\application.properties");
 			props.load(fileInputStream);
 
 		} catch (Exception e) {

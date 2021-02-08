@@ -1,59 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="LogoutSuite" duration-ms="41071" started-at="2021-02-03T18:35:58 EST" finished-at="2021-02-03T18:36:39 EST">
+  <suite name="Suite" duration-ms="35547" started-at="2021-02-07T22:09:57 EST" finished-at="2021-02-07T22:10:33 EST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="41071" started-at="2021-02-03T18:35:58 EST" finished-at="2021-02-03T18:36:39 EST">
-      <class name="com.dollardays.testcases.LogoutTestCase">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="beforeClass" is-config="true" duration-ms="12" started-at="2021-02-03T18:35:58 EST" finished-at="2021-02-03T18:35:58 EST">
+    <test name="Test" duration-ms="35547" started-at="2021-02-07T22:09:57 EST" finished-at="2021-02-07T22:10:33 EST">
+      <class name="com.dollardays.testcases.MenuTestCase">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.dollardays.testcases.MenuTestCase@ba8d91c]" name="beforeClass" is-config="true" duration-ms="10" started-at="2021-02-07T22:09:57 EST" finished-at="2021-02-07T22:09:57 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="setUpBrowser" is-config="true" duration-ms="6125" started-at="2021-02-03T18:35:59 EST" finished-at="2021-02-03T18:36:05 EST">
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.MenuTestCase@ba8d91c]" name="setUpBrowser" is-config="true" duration-ms="6089" started-at="2021-02-07T22:09:58 EST" finished-at="2021-02-07T22:10:04 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="invokeLogout(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="invokeLogout" duration-ms="9127" started-at="2021-02-03T18:36:05 EST" data-provider="dd-dataprovider" finished-at="2021-02-03T18:36:14 EST">
+        <test-method status="PASS" signature="validate_Mobile_Menu(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.MenuTestCase@ba8d91c]" name="validate_Mobile_Menu" duration-ms="23481" started-at="2021-02-07T22:10:04 EST" data-provider="dd-dataprovider" finished-at="2021-02-07T22:10:27 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ExptectedResult=Logged out from user toggle button., TestCase=Logout from user toggle button, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=Logout, UserName=srikanthtesting100@gmail.com, TCID=TC1}]]>
+                <![CDATA[{TestCase=Select total number of items which should display per page, Item flow=Bedding, Bath & Decor-> Blankets & Bedding-> Blankets & Throws, ProductName=, TCID=TC6, SheetName=Menu, Runmode=Yes, Paging=, SortItem=, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, isItemAddedtoCart=, ExpectedResult=Number of items displayed as per selected number in 'View' dropdown , No of Item per Page=24,12,48, TargetURL=https://www.dollardays.com/wholesale-blankets-and-throws.html, Verify Categories=}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invokeLogout -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="quit" is-config="true" duration-ms="5053" started-at="2021-02-03T18:36:14 EST" finished-at="2021-02-03T18:36:19 EST">
+        </test-method> <!-- validate_Mobile_Menu -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.MenuTestCase@ba8d91c]" name="quit" is-config="true" duration-ms="5258" started-at="2021-02-07T22:10:27 EST" finished-at="2021-02-07T22:10:33 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="setUpBrowser" is-config="true" duration-ms="5176" started-at="2021-02-03T18:36:19 EST" finished-at="2021-02-03T18:36:24 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="invokeLogout(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="invokeLogout" duration-ms="9949" started-at="2021-02-03T18:36:24 EST" data-provider="dd-dataprovider" finished-at="2021-02-03T18:36:34 EST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{ExptectedResult=Logged out from Account web page., TestCase=Logout from User Account Page, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=Logout, UserName=srikanthtesting100@gmail.com, TCID=TC2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invokeLogout -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="quit" is-config="true" duration-ms="4953" started-at="2021-02-03T18:36:34 EST" finished-at="2021-02-03T18:36:39 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.dollardays.testcases.LogoutTestCase@ba8d91c]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-02-03T18:36:39 EST" finished-at="2021-02-03T18:36:39 EST">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.dollardays.testcases.MenuTestCase@ba8d91c]" name="afterClass" is-config="true" duration-ms="0" started-at="2021-02-07T22:10:33 EST" finished-at="2021-02-07T22:10:33 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.dollardays.testcases.LogoutTestCase -->
+      </class> <!-- com.dollardays.testcases.MenuTestCase -->
     </test> <!-- Test -->
-  </suite> <!-- LogoutSuite -->
+  </suite> <!-- Suite -->
 </testng-results>

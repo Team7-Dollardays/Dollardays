@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>TestNG:  DD_IntegrationTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>DD_IntegrationTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Feb 03 18:59:34 EST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>184 seconds (184200 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.dollardays.testcases.LoginTestcase.invokeLogin()'><b>invokeLogin</b><br>Test class: com.dollardays.testcases.LoginTestcase<br>Parameters: {TestCase=Valid Login Credentials, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=Login, UserName=srikanthtesting100@gmail.com, TCID=TC1}</td>
+<td></td>
+<td>6</td>
+<td>com.dollardays.testcases.LoginTestcase@3d36e4cd</td></tr>
+<tr>
+<td title='com.dollardays.testcases.LogoutTestCase.invokeLogout()'><b>invokeLogout</b><br>Test class: com.dollardays.testcases.LogoutTestCase<br>Parameters: {ExptectedResult=Logged out from user toggle button., TestCase=Logout from user toggle button, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=Logout, UserName=srikanthtesting100@gmail.com, TCID=TC1}</td>
+<td></td>
+<td>9</td>
+<td>com.dollardays.testcases.LogoutTestCase@709ba3fb</td></tr>
+<tr>
+<td title='com.dollardays.testcases.LogoutTestCase.invokeLogout()'><b>invokeLogout</b><br>Test class: com.dollardays.testcases.LogoutTestCase<br>Parameters: {ExptectedResult=Logged out from Account web page., TestCase=Logout from User Account Page, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=Logout, UserName=srikanthtesting100@gmail.com, TCID=TC2}</td>
+<td></td>
+<td>10</td>
+<td>com.dollardays.testcases.LogoutTestCase@709ba3fb</td></tr>
+<tr>
+<td title='com.dollardays.testcases.SubmitRequestTest.validate_SubmitRequest_WebPage()'><b>validate_SubmitRequest_WebPage</b><br>Test class: com.dollardays.testcases.SubmitRequestTest<br>Parameters: {Message=, Password=cGFzc3dvcmQxMjM=, PageURL=https://www.dollardays.com/case.aspx, CaptchaValidationMsg=, HeaderTitle=, OrderNo=, PageDescription=, UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=Validate - Submit a Request web page is loading, TestCaseType=Positive, Email=, TestScenario=NonCaptcha, TCID=TC1, SheetName=SubmitRequest}</td>
+<td></td>
+<td>12</td>
+<td>com.dollardays.testcases.SubmitRequestTest@5d20e46</td></tr>
+<tr>
+<td title='com.dollardays.testcases.SubmitRequestTest.validate_SubmitRequest_WebPage()'><b>validate_SubmitRequest_WebPage</b><br>Test class: com.dollardays.testcases.SubmitRequestTest<br>Parameters: {Message=, Password=cGFzc3dvcmQxMjM=, PageURL=, CaptchaValidationMsg=, HeaderTitle=Submit A Request, OrderNo=, PageDescription=, UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=Verify Page header title - 'Submit a Request' should display, TestCaseType=Positive, Email=, TestScenario=NonCaptcha, TCID=TC2, SheetName=SubmitRequest}</td>
+<td></td>
+<td>12</td>
+<td>com.dollardays.testcases.SubmitRequestTest@5d20e46</td></tr>
+<tr>
+<td title='com.dollardays.testcases.SubmitRequestTest.validate_SubmitRequest_WebPage()'><b>validate_SubmitRequest_WebPage</b><br>Test class: com.dollardays.testcases.SubmitRequestTest<br>Parameters: {Message=, Password=cGFzc3dvcmQxMjM=, PageURL=, CaptchaValidationMsg=, HeaderTitle=, OrderNo=, PageDescription=We’re here to help you! Please provide us with as much information as possible in the fields below. The more detailed your request, the faster our Customer Care Team will be able to assist you., UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=Verify page header message - 'We’re here to help you!...' Should display , TestCaseType=Positive, Email=, TestScenario=NonCaptcha, TCID=TC3, SheetName=SubmitRequest}</td>
+<td></td>
+<td>12</td>
+<td>com.dollardays.testcases.SubmitRequestTest@5d20e46</td></tr>
+<tr>
+<td title='com.dollardays.testcases.SubmitRequestTest.validate_SubmitRequest_WebPage()'><b>validate_SubmitRequest_WebPage</b><br>Test class: com.dollardays.testcases.SubmitRequestTest<br>Parameters: {Message=, Password=cGFzc3dvcmQxMjM=, PageURL=, CaptchaValidationMsg=, HeaderTitle=, OrderNo=, PageDescription=, UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=Validate all links are working, TestCaseType=Positive, Email=, TestScenario=NonCaptcha, TCID=TC4, SheetName=SubmitRequest}</td>
+<td></td>
+<td>12</td>
+<td>com.dollardays.testcases.SubmitRequestTest@5d20e46</td></tr>
+<tr>
+<td title='com.dollardays.testcases.SubmitRequestTest.validate_SubmitRequest_WebPage()'><b>validate_SubmitRequest_WebPage</b><br>Test class: com.dollardays.testcases.SubmitRequestTest<br>Parameters: {Message=, Password=cGFzc3dvcmQxMjM=, PageURL=, CaptchaValidationMsg=, HeaderTitle=, OrderNo=, PageDescription=, UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=user name should display in email field as page loads, TestCaseType=Positive, Email=srikanthtesting100@gmail.com, TestScenario=NonCaptcha, TCID=TC5, SheetName=SubmitRequest}</td>
+<td></td>
+<td>12</td>
+<td>com.dollardays.testcases.SubmitRequestTest@5d20e46</td></tr>
+<tr>
+<td title='com.dollardays.testcases.SubmitRequestTest.validate_SubmitRequest_WebPage()'><b>validate_SubmitRequest_WebPage</b><br>Test class: com.dollardays.testcases.SubmitRequestTest<br>Parameters: {Message=, Password=cGFzc3dvcmQxMjM=, PageURL=, CaptchaValidationMsg=Captcha validation is required., HeaderTitle=, OrderNo=, PageDescription=, UserName=srikanthtesting100@gmail.com, Runmode=Yes, ClearEmailField=, Phone=, RequestType=, TestCase=Not checked Captcha and click on Submit button, TestCaseType=Negative, Email=, TestScenario=NonCaptcha, TCID=TC6, SheetName=SubmitRequest}</td>
+<td></td>
+<td>12</td>
+<td>com.dollardays.testcases.SubmitRequestTest@5d20e46</td></tr>
+</table><p>
+</body>
+</html>

@@ -21,7 +21,6 @@ public class LogoutTestCase  extends BaseTest{
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
 	public void invokeLogout(Hashtable<String, String> datatable) throws Exception{
 		ExtentTestManager.startTest("Logout-" +datatable.get("TCID") + ":" + datatable.get("TestCase"));
-		
 		String actualText = "";
 		String expectedText = "";
 		System.out.println(datatable.get("TestCase"));

@@ -25,7 +25,8 @@ public class ExtentReport {
 	
 	
 	private static ExtentReports extent;
-    private static String reportFileName = "Dollardays-Automaton-Report_"+getCurrentDateAnTime()+".html";
+  //  private static String reportFileName = "Dollardays-Automaton-Report_"+getCurrentDateAnTime()+".html";
+	 private static String reportFileName = "Dollardays-Automaton-Report_"+".html";
  
     public static ExtentReports getInstance() {
         if (extent == null)

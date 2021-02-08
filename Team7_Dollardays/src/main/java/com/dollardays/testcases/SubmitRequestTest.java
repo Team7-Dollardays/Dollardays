@@ -30,6 +30,7 @@ public class SubmitRequestTest extends BaseTest{
 	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "SubmitRequest",  testcaseID = "", runmode = "Yes")
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
 	public void validate_SubmitRequest_WebPage(Hashtable<String, String> datatable) throws Exception{
+		ExtentTestManager.startTest("SubmitRequest-" +datatable.get("TCID") + ":" + datatable.get("TestCase"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		if((datatable.get("TestScenario").equalsIgnoreCase("nonCaptcha")))
 		{
