@@ -165,11 +165,7 @@ public class MenuTestCase extends BaseTest {
 		
 		// call assert() and return test output
 		testResults(datatable.get("TestCase"));
-		Thread.sleep(500);
-		loginPage.getUserDrodown().click();
-		Thread.sleep(500);
-		loginPage.getLogoutBtn().click();
-		ExtentTestManager.getTest().log(Status.PASS, "Step "+ stepIndex+": Clicked on LogOut");
+		
 	}
 	
 	// TC1 

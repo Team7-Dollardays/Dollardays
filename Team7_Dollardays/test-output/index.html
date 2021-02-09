@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\shachi\GitStuff\Dollardays\Team7_Dollardays\config\menu.xml</span>
+                    <span>C:\Users\shachi\GitStuff\Dollardays\Team7_Dollardays\config\search.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.dollardays.testcases.MenuTestCase" hash-for-method="validate_Mobile_Menu({TestCase=Select total number of items which should display per page, Item flow=Bedding, Bath &amp; Deco...)">validate_Mobile_Menu({TestCase=Select total number of items which should display per page, Item flow=Bedding, Bath & Deco...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.dollardays.testcases.SearchTestcase" hash-for-method="VerifyLeftPaneMouseHover({TestCase=VerifyLeftPaneMouseHover-  item list should be updated when Mousehover on item list in lef...)">VerifyLeftPaneMouseHover({TestCase=VerifyLeftPaneMouseHover-  item list should be updated when Mousehover on item list in lef...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -122,15 +122,15 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.dollardays.testcases.MenuTestCase</span>
+              <span class="class-name">com.dollardays.testcases.SearchTestcase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validate_Mobile_Menu({TestCase=Select total number of items which should display per page, Item flow=Bedding, Bath &amp; Deco...)">
-                  </a> <!-- validate_Mobile_Menu({TestCase=Select total number of items which should display per page, Item flow=Bedding, Bath & Deco...) -->
-                  <span class="method-name">validate_Mobile_Menu</span>
-                  <span class="parameters">({TestCase=Select total number of items which should display per page, Item flow=Bedding, Bath & Decor-> Blankets & Bedding-> Blankets & Throws, ProductName=, TCID=TC6, SheetName=Menu, Runmode=Yes, Paging=, SortItem=, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, isItemAddedtoCart=, ExpectedResult=Number of items displayed as per selected number in 'View' dropdown , No of Item per Page=24,12,48, TargetURL=https://www.dollardays.com/wholesale-blankets-and-throws.html, Verify Categories=})</span>
+                  <a name="VerifyLeftPaneMouseHover({TestCase=VerifyLeftPaneMouseHover-  item list should be updated when Mousehover on item list in lef...)">
+                  </a> <!-- VerifyLeftPaneMouseHover({TestCase=VerifyLeftPaneMouseHover-  item list should be updated when Mousehover on item list in lef...) -->
+                  <span class="method-name">VerifyLeftPaneMouseHover</span>
+                  <span class="parameters">({TestCase=VerifyLeftPaneMouseHover-  item list should be updated when Mousehover on item list in left pane, TCID=TC5, SheetName=Search, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, ExpectedResult=Product item list getting updated in right pane in 'Search Result' box and product title contains text of Category name, SearchItem=, Leftpane Category=Wipes;kn95;N95, TargetURL=, =})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -138,7 +138,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shachi\GitStuff\Dollardays\Team7_Dollardays\config\menu.xml</span>
+            <span class="header-content">C:\Users\shachi\GitStuff\Dollardays\Team7_Dollardays\config\search.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -148,11 +148,11 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.dollardays.listners.TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Dollar Days Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.dollardays.testcases.MenuTestCase&quot;/&gt;
+      &lt;class name=&quot;com.dollardays.testcases.SearchTestcase&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Dollar Days Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,7 +164,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Dollar Days Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validate_Mobile_Menu')
-data.setCell(0, 2, 'com.dollardays.testcases.MenuTestCase')
-data.setCell(0, 3, 23481);
+data.setCell(0, 1, 'VerifyLeftPaneMouseHover')
+data.setCell(0, 2, 'com.dollardays.testcases.SearchTestcase')
+data.setCell(0, 3, 11524);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -225,26 +225,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.dollardays.testcases.MenuTestCase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.dollardays.testcases.SearchTestcase</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpBrowser</span>
-                <span class="method-start">654 ms</span>
+                <span class="method-start">812 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">validate_Mobile_Menu({TestCase=Select total number of items which should display per page, Item flow=Bedding, Bath & Deco...)</span>
-                <span class="method-start">6744 ms</span>
+                <span class="method-name">VerifyLeftPaneMouseHover({TestCase=VerifyLeftPaneMouseHover-  item list should be updated when Mousehover on item list in lef...)</span>
+                <span class="method-start">8500 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">30265 ms</span>
+                <span class="method-start">20028 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">35524 ms</span>
+                <span class="method-start">21168 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
