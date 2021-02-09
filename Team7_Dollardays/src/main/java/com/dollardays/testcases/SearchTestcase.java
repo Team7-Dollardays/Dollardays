@@ -17,10 +17,10 @@ import com.dollardays.utilities.TestUtil;
 public class SearchTestcase extends BaseTest{
 
 	
-	@DDDataProvider(datafile = "testdata/testdata1.xlsx", sheetName = "Sheet1",  testcaseID = "TC1", runmode = "Yes")
+	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "Search",  testcaseID = "TC3", runmode = "Yes")
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
-    public void TC_01_searchWithValidDta(Hashtable<String, String> datatable) throws InterruptedException, UnsupportedEncodingException, GeneralSecurityException{
-		
+    public void searchWithValidDta(Hashtable<String, String> datatable) throws InterruptedException, UnsupportedEncodingException, GeneralSecurityException{
+		ExtentTestManager.startTest("Search_TestCase_" +datatable.get("TCID"));
 		ExtentTestManager.getTest().log(Status.PASS, "Testcase 1 : Verify Search functionality");
 		LoginPage loginPage = new LoginPage(driver);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1  : Login with Valid credentials");
@@ -28,7 +28,7 @@ public class SearchTestcase extends BaseTest{
 		Thread.sleep(1000);
 		SearchPage searchpage = new SearchPage(driver);
 		
-		searchpage.getSearchBar().sendKeys("backpack");
+		searchpage.getSearchBar().sendKeys(datatable.get("SearchItem").trim());
 		ExtentTestManager.getTest().log(Status.PASS, "Step 2  : Enter search data in the search bar");
 		
 		searchpage.getsearchBtn().click();
@@ -38,17 +38,13 @@ public class SearchTestcase extends BaseTest{
 		String categoryCount = searchpage.getsearchCount().getText();
 		ExtentTestManager.getTest().log(Status.PASS, "Step 4  : Should display '"+categoryCount+"'");
 		
-		Thread.sleep(500);
-		loginPage.getUserDrodown().click();
-		Thread.sleep(500);
-		loginPage.getLogoutBtn().click();
-		ExtentTestManager.getTest().log(Status.PASS, "Step 5  : Clicked on LogOut");
+		
 	}
 
-	
-	@DDDataProvider(datafile = "testdata/testdata1.xlsx", sheetName = "Sheet1",  testcaseID = "TC1", runmode = "Yes")
+	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "Search",  testcaseID = "TC2", runmode = "Yes")
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
-    public void TC_02_searchWithInvalidDta(Hashtable<String, String> datatable) throws InterruptedException, UnsupportedEncodingException, GeneralSecurityException{
+    public void searchWithInvalidDta(Hashtable<String, String> datatable) throws InterruptedException, UnsupportedEncodingException, GeneralSecurityException{
+		ExtentTestManager.startTest("Search_TestCase_" +datatable.get("TCID"));
 		ExtentTestManager.getTest().log(Status.PASS, "Testcase 2 : Verify Search functionality with Invalid data");
 		LoginPage loginPage = new LoginPage(driver);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1  : Login with Valid credentials");
@@ -56,7 +52,7 @@ public class SearchTestcase extends BaseTest{
 		Thread.sleep(1000);
 		SearchPage searchpage = new SearchPage(driver);
 		
-		searchpage.getSearchBar().sendKeys("ffffgf");
+		searchpage.getSearchBar().sendKeys(datatable.get("SearchItem").trim());
 		ExtentTestManager.getTest().log(Status.PASS, "Step 2  : Enter search data in the search bar");
 		
 		searchpage.getsearchBtn().click();
@@ -66,16 +62,12 @@ public class SearchTestcase extends BaseTest{
 		String nodatafound = searchpage.getnoDataFoundMsg().getText();
 		ExtentTestManager.getTest().log(Status.PASS, "Step 4  : Should display '"+nodatafound+"'");
 		
-		Thread.sleep(500);
-		loginPage.getUserDrodown().click();
-		Thread.sleep(500);
-		loginPage.getLogoutBtn().click();
-		ExtentTestManager.getTest().log(Status.PASS, "Step 5  : Clicked on LogOut");
 	}
 	
-	@DDDataProvider(datafile = "testdata/testdata1.xlsx", sheetName = "Sheet1",  testcaseID = "TC1", runmode = "Yes")
+	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "Search",  testcaseID = "TC1", runmode = "Yes")
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
-    public void TC_03_searchPageWithNavigationLinks(Hashtable<String, String> datatable) throws InterruptedException, UnsupportedEncodingException, GeneralSecurityException{
+    public void searchPageWithNavigationLinks(Hashtable<String, String> datatable) throws InterruptedException, UnsupportedEncodingException, GeneralSecurityException{
+		ExtentTestManager.startTest("Search_TestCase_" +datatable.get("TCID"));
 		ExtentTestManager.getTest().log(Status.PASS, "Testcase 3 : Validate Product Navigation Pages ");
 		LoginPage loginPage = new LoginPage(driver);
 		ExtentTestManager.getTest().log(Status.PASS, "Step 1  : Login with Valid credentials");
@@ -83,7 +75,7 @@ public class SearchTestcase extends BaseTest{
 		loginPage.invokeLogin();
 		Thread.sleep(1000);
 		SearchPage searchpage = new SearchPage(driver);
-		searchpage.getSearchBar().sendKeys("backpack");
+		searchpage.getSearchBar().sendKeys(datatable.get("SearchItem").trim());
 		ExtentTestManager.getTest().log(Status.PASS, "Step 2  : Enter search data in the search bar.");
 		
 		searchpage.getsearchBtn().click();
@@ -102,6 +94,8 @@ public class SearchTestcase extends BaseTest{
 		
 		
 	}
+
+	
 	
 	
 	

@@ -55,10 +55,9 @@ public class LoginPage {
 		return loginBtn;
 	}
 	
-	//@FindBy(xpath = "//*[@id='header-main']/div/div/div[3]/div/ul/li[1]/a")
+	
 	@FindBy(xpath="//*[@id=\"aspnetForm\"]/header/div/div/div/div[3]/div/ul/li[1]/a/span")
 	private WebElement userDrodown;
-
 	public WebElement getUserDrodown() {
 		return userDrodown;
 	}	

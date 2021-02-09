@@ -24,7 +24,7 @@ public class MenuTestCase extends BaseTest {
 	private String expectedResult = "false";
 	private int stepIndex = 4;
 	
-	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "Menu",  testcaseID = "TC6", runmode = "Yes")
+	@DDDataProvider(datafile = "testdata/testdata.xlsx", sheetName = "Menu",  testcaseID = "", runmode = "Yes")
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
 	public void validate_Mobile_Menu(Hashtable<String, String> datatable) throws Exception{
 		
@@ -40,9 +40,12 @@ public class MenuTestCase extends BaseTest {
 		
 		// Creating Object of Login Page to login into dollar days
 		LoginPage loginPage = new LoginPage(driver);
-		ExtentTestManager.getTest().log(Status.PASS, "Step1: Login into DollarDays.");
-		loginPage.login(datatable.get("UserName"), Base64.decrypt(datatable.get("Password")));
-		Thread.sleep(1000);
+		if(datatable.get("AddItemWithoutLogin").equals("") || (datatable.get("AddItemWithoutLogin") == null) )
+		{
+			ExtentTestManager.getTest().log(Status.PASS, "Step1: Login into DollarDays.");
+			loginPage.login(datatable.get("UserName"), Base64.decrypt(datatable.get("Password")));
+			Thread.sleep(1000);
+		}
 		
 		// Click on Menu  
 		ExtentTestManager.getTest().log(Status.PASS, "Step 2: Click on hamberger icon to open menu panel");
@@ -107,15 +110,30 @@ public class MenuTestCase extends BaseTest {
 			expectedResult = datatable.get("ExpectedResult").trim();
 		}
 		
-		// TC6 - Verify no. of items/page is matched with number selected in 'View' drop down.
+		// TC6 & TC7 - Verify no. of items/page is matched with number selected in 'View' drop down. and Verify Paging is working
 		if((!(datatable.get("No of Item per Page").equals(""))) && (datatable.get("No of Item per Page") != null))
 		{
 			// TC 7 - Paging
 			if((!(datatable.get("Paging").equals(""))) && (datatable.get("Paging") != null))
 			{
-				
+				String noOfItemPerPage =  (datatable.get("No of Item per Page").trim()).substring(0,2);
+				System.out.println("noOfItemPerPage =" + noOfItemPerPage);
+				Select viewDD = new Select(menuPage.getViewDropdown());
+				viewDD.selectByVisibleText(noOfItemPerPage);
+				Thread.sleep(2000);
+				ExtentTestManager.getTest().log(Status.PASS, "Step "+ stepIndex+": Select "+ noOfItemPerPage  + " in 'View' dropdown.");
+				stepIndex += 1;
+				if(isPage_Selected(menuPage))
+				{
+					actualResult = "Paging is working";
+				}
+				else
+				{
+					actualResult = "Paging is not working";
+				}
+				expectedResult = datatable.get("ExpectedResult").trim();	
 			}
-			else  // TC6
+			else  // TC6 - Verify no. of items/page is matched with number selected in 'View' drop down.
 			{
 				if(isViewDD_Selected(menuPage,datatable.get("No of Item per Page").trim()))
 				{
@@ -130,8 +148,28 @@ public class MenuTestCase extends BaseTest {
 			
 		}
 		
+		if((!(datatable.get("AddItemWithoutLogin").equals(""))) && (datatable.get("AddItemWithoutLogin") != null))
+		{
+			if(!(isItemaddedWithoutLogin(menuPage,datatable.get("ProductName").trim())))
+			{
+				actualResult = "navigated to Login page when click on 'Login to Buy' button below item name in item list page";
+				ExtentTestManager.getTest().log(Status.PASS, "Step "+ stepIndex+": navigated to Login page when clicked on 'Login to Buy' button below item name in item list page ");
+				stepIndex += 1;
+			}
+			else
+			{
+				actualResult = "It is not navigated to Login page when click on 'Login to Buy' button below item name in item list page";
+			}
+			expectedResult = datatable.get("ExpectedResult").trim();
+		}
+		
 		// call assert() and return test output
-		testResults(datatable.get("TestCase"));	
+		testResults(datatable.get("TestCase"));
+		Thread.sleep(500);
+		loginPage.getUserDrodown().click();
+		Thread.sleep(500);
+		loginPage.getLogoutBtn().click();
+		ExtentTestManager.getTest().log(Status.PASS, "Step "+ stepIndex+": Clicked on LogOut");
 	}
 	
 	// TC1 
@@ -153,7 +191,7 @@ public class MenuTestCase extends BaseTest {
 		}		
 	}
 	
-	// called by TC2,TC3,TC4,TC5
+	// called by TC2,TC3,TC4,TC5,TC6,TC7,TC8 : this method search item and click on the item to open item page which has related item list to shop.
 	public void searchAndOpen_ItemPage(String itemFlow,MenuPage menuPage) throws InterruptedException
 	{
 		String[] itemFlowArray = itemFlow.split("->");
@@ -292,6 +330,90 @@ public class MenuTestCase extends BaseTest {
 		 
 		}
 		return isSelected;
+	}
+	
+	//TC 7 - paging 
+	public boolean isPage_Selected(MenuPage menuPage) throws InterruptedException
+	{
+		try
+		{
+			
+			WebElement lastPageIcon = menuPage.getLastPage_Icon(menuPage.getPagingContainer());
+			if(lastPageIcon !=null)
+			{
+				// click on Last Page
+				lastPageIcon.click();
+				Thread.sleep(2000);
+				ExtentTestManager.getTest().log(Status.PASS, "Step "+ stepIndex+": Clicked on 'Last Page' Icon.");
+				stepIndex += 1;
+				int totalPages = menuPage.getTotalPages(menuPage.getPagingContainer());
+				
+				// Click on First Page
+				WebElement firstPageIcon = menuPage.getFirstPage_Icon(menuPage.getPagingContainer());
+				firstPageIcon.click();
+				Thread.sleep(2000);
+				ExtentTestManager.getTest().log(Status.PASS, "Step "+ stepIndex+": Clicked on 'First Page' Icon.");
+				stepIndex += 1;
+				System.out.println("Page Size="+ totalPages);
+				
+				// click on 'NextPage'
+				WebElement pagelink;
+				for(int i=1;i<totalPages;i++)
+				{
+					pagelink = menuPage.getNextPage_Icon(menuPage.getPagingContainer());
+					pagelink.click();
+				}
+				System.out.println("Next Page link is clicked " + totalPages + " times.");
+				ExtentTestManager.getTest().log(Status.PASS, "Step "+ stepIndex+": Clicked on 'Next Page' Icon " + totalPages + " times.");
+				stepIndex += 1;
+				
+				// Click on Previous page link
+				System.out.println("Click on previous Page link");
+				for(int i=1;i<totalPages;i++)
+				{
+					pagelink = menuPage.getPreviousPage_Icon(menuPage.getPagingContainer());
+					pagelink.click();
+				}
+				System.out.println("Previous Page link is clicked " + totalPages + " times.");
+				ExtentTestManager.getTest().log(Status.PASS, "Step "+ stepIndex+": Clicked on 'Previous Page' Icon " + totalPages + " times.");
+				stepIndex += 1;
+				// Click on every page number
+				for(int i=2;i<=totalPages;i++)
+				{
+					pagelink = menuPage.getPageByNumber(menuPage.getPagingContainer(),Integer.toString(i));
+					pagelink.click();
+				}
+				System.out.println("Clicked on each page number.");
+				ExtentTestManager.getTest().log(Status.PASS, "Step "+ stepIndex+": Clicked on each page number.");
+				stepIndex += 1;
+			}
+		}catch(Exception e)
+		{
+			ExtentTestManager.getTest().log(Status.FAIL, "Step "+ stepIndex+": Error occured. Error :" + e.getMessage());
+			stepIndex += 1;
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean isItemaddedWithoutLogin(MenuPage menuPage,String ProductName ) throws InterruptedException
+	{
+		System.out.println("Search for Product : " + ProductName.trim());
+		List<WebElement> productList = menuPage.getProducts_List();
+		int productTitleIndex = menuPage.getProductTitleIndex(ProductName.trim(),productList);
+		WebElement logintoBuyBtn = menuPage.getLogintoBuybtn(productList,productTitleIndex);
+		
+		ExtentTestManager.getTest().log(Status.PASS, "Step "+ stepIndex+": Clicked on 'LOGIN to BUY' button to add product " + ProductName + " to cart.");
+		stepIndex += 1;
+		
+		// login to buy button
+		logintoBuyBtn.click();
+		Thread.sleep(1000);
+		if(driver.getCurrentUrl().trim().equals("https://www.dollardays.com/sitelogin.aspx"))
+		{
+			return false;
+		}
+		return true;
 	}
 
 	public void testResults(String testCase)

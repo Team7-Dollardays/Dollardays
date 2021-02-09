@@ -4,11 +4,12 @@
 <listeners>
 <listener class-name="com.dollardays.listners.TestListener"></listener>
 </listeners>
-  <test thread-count="5" name="DD_IntegrationTest">
+  <test thread-count="5" name="Dollar Days_Integration_Test">
     <classes>
       <class name="com.dollardays.testcases.SubmitRequestTest"/>
       <class name="com.dollardays.testcases.LogoutTestCase"/>
       <class name="com.dollardays.testcases.LoginTestcase"/>
+      <class name="com.dollardays.testcases.MenuTestCase"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

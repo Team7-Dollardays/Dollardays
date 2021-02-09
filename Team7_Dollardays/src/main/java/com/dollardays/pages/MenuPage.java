@@ -118,39 +118,50 @@ public class MenuPage {
     	return paging_container;
     }
     
+    public int getTotalPages(WebElement paging_container)
+    {
+    	int size = (paging_container.findElements(By.xpath(".//li"))).size();
+    	List<WebElement> pagenolist = paging_container.findElements(By.xpath(".//li"));
+    	WebElement link = pagenolist.get(size-3).findElement(By.xpath(".//a"));
+    	System.out.println("Total Page "+link.getText());
+    	int totalPages = Integer.valueOf(link.getText());
+    	return totalPages;
+    }
+    
     // get Last Page 
-    //div[@class='select-bar pagination-bar']/ul/li[a/@title='Last Page']
     public WebElement getLastPage_Icon(WebElement paging_container)
     {
-    	return null;
+    	WebElement lastPage = paging_container.findElement(By.xpath(".//li/a[@title='Last Page']"));
+    	return lastPage;
     }
     
     // get First Page 
-  //div[@class='select-bar pagination-bar']/ul/li[a/@title='First Page']
     public WebElement getFirstPage_Icon(WebElement paging_container)
     {
-    	return null;
+    	WebElement firstPage = paging_container.findElement(By.xpath(".//li/a[@title='First Page']"));
+    	
+    	return firstPage;
     }
     
     // get Next Page 
-   //div[@class='select-bar pagination-bar']/ul/li[a/@title='Next Page']
     public WebElement getNextPage_Icon(WebElement paging_container)
     {
-    	return null;
+    	WebElement nextPage = paging_container.findElement(By.xpath(".//li/a[@title='Next Page']"));
+    	return nextPage;
     }
     
     // get Previous Page 
-    //div[@class='select-bar pagination-bar']/ul/li[a/@title='Previous Page']
     public WebElement getPreviousPage_Icon(WebElement paging_container)
     {
-    	return null;
+    	WebElement nextPage = paging_container.findElement(By.xpath(".//li/a[@title='Previous Page']"));
+    	return nextPage;
     }
     
     // get on page no.
-    //div[@class='select-bar pagination-bar']/ul/li[a/text()='3']
-    public WebElement getPageNumber(WebElement paging_container)
+    public WebElement getPageByNumber(WebElement paging_container,String pageIndex)
     {
-    	return null;
+    	WebElement pageNoLink = paging_container.findElement(By.xpath(".//li/a[text()='"+pageIndex+"']"));
+    	return pageNoLink;
     }
     
 	// Return Menu Item from Menu Item List to open Item list page
@@ -223,6 +234,16 @@ public class MenuPage {
     	List<WebElement> addtoCartbtn = productList.get(productBoxIndex).findElements(By.xpath(".//input[@value='Add to Cart']"));
         if(addtoCartbtn.size() != 0)
     	    return addtoCartbtn.get(0);
+    	return null;
+    }
+    
+    // get item'sLogin to buy button inside Project Title's <div> tag
+    // //a[text()='LOG IN TO  Buy']
+    public WebElement getLogintoBuybtn(List<WebElement> productList,int productBoxIndex)
+    {
+    	List<WebElement> logintoBuybtn = productList.get(productBoxIndex).findElements(By.xpath(".//a[text()='LOG IN TO  Buy']"));
+        if(logintoBuybtn.size() != 0)
+    	    return logintoBuybtn.get(0);
     	return null;
     }
    
