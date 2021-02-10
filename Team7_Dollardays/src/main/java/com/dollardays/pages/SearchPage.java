@@ -133,9 +133,10 @@ public class SearchPage {
 	}
 		
 	// get 'Show more Products' in 'Search Result' box
+	//a[text()='Shop More Products']
 	@FindBy(xpath="//a[text()='Shop More Products']")
-	private List<WebElement> shopmoreBtn;
-	public List<WebElement> getSearchResult_ShopMoreBtn()
+	private WebElement shopmoreBtn;
+	public WebElement getSearchResult_ShopMoreBtn()
 	{
 		return shopmoreBtn;
 	}
@@ -146,6 +147,13 @@ public class SearchPage {
 	public String getProduct_title()
 	{
 		return product_title.getText();
+	}
+	
+	@FindBy(xpath="//ul[@class='breadcrumb col-sm-12']/li[2]/a")
+	private WebElement item_searchterm;
+	public WebElement getItemSearchTerm()
+	{
+		return item_searchterm;
 	}
 	
 	public String getSearchWithValue() throws InterruptedException {

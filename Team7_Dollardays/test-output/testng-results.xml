@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="21199" started-at="2021-02-09T17:22:12 EST" finished-at="2021-02-09T17:22:33 EST">
+  <suite name="Suite" duration-ms="19897" started-at="2021-02-09T23:20:01 EST" finished-at="2021-02-09T23:20:21 EST">
     <groups>
     </groups>
-    <test name="Dollar Days Test" duration-ms="21199" started-at="2021-02-09T17:22:12 EST" finished-at="2021-02-09T17:22:33 EST">
+    <test name="Dollar Days Test" duration-ms="19897" started-at="2021-02-09T23:20:01 EST" finished-at="2021-02-09T23:20:21 EST">
       <class name="com.dollardays.testcases.SearchTestcase">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.dollardays.testcases.SearchTestcase@ba8d91c]" name="beforeClass" is-config="true" duration-ms="14" started-at="2021-02-09T17:22:12 EST" finished-at="2021-02-09T17:22:12 EST">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.dollardays.testcases.SearchTestcase@ba8d91c]" name="beforeClass" is-config="true" duration-ms="21" started-at="2021-02-09T23:20:01 EST" finished-at="2021-02-09T23:20:01 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.SearchTestcase@ba8d91c]" name="setUpBrowser" is-config="true" duration-ms="7687" started-at="2021-02-09T17:22:13 EST" finished-at="2021-02-09T17:22:21 EST">
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:com.dollardays.testcases.SearchTestcase@ba8d91c]" name="setUpBrowser" is-config="true" duration-ms="7375" started-at="2021-02-09T23:20:02 EST" finished-at="2021-02-09T23:20:10 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="VerifyLeftPaneMouseHover(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.SearchTestcase@ba8d91c]" name="VerifyLeftPaneMouseHover" duration-ms="11524" started-at="2021-02-09T17:22:21 EST" data-provider="dd-dataprovider" finished-at="2021-02-09T17:22:32 EST">
+        <test-method status="PASS" signature="verifyShowMoreProductsClick(java.util.Hashtable)[pri:0, instance:com.dollardays.testcases.SearchTestcase@ba8d91c]" name="verifyShowMoreProductsClick" duration-ms="10326" started-at="2021-02-09T23:20:10 EST" data-provider="dd-dataprovider" finished-at="2021-02-09T23:20:20 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{TestCase=VerifyLeftPaneMouseHover-  item list should be updated when Mousehover on item list in left pane, TCID=TC5, SheetName=Search, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, ExpectedResult=Product item list getting updated in right pane in 'Search Result' box and product title contains text of Category name, SearchItem=, Leftpane Category=Wipes;kn95;N95, TargetURL=, =}]]>
+                <![CDATA[{TestCase=VerifyShowMoreProductsClick, TCID=TC9, SheetName=Search, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, ExpectedResult=Clicking on 'Show More Products', it is navigated to 'Item detail' page and 'Search for items in bulk' field has item name., SearchItem=notebook, Leftpane Category=, TargetURL=https://www.dollardays.com/sitesearch.aspx?pg=1&terms=notebook, =}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyLeftPaneMouseHover -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.SearchTestcase@ba8d91c]" name="quit" is-config="true" duration-ms="1138" started-at="2021-02-09T17:22:32 EST" finished-at="2021-02-09T17:22:33 EST">
+        </test-method> <!-- verifyShowMoreProductsClick -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.dollardays.testcases.SearchTestcase@ba8d91c]" name="quit" is-config="true" duration-ms="1336" started-at="2021-02-09T23:20:20 EST" finished-at="2021-02-09T23:20:21 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.dollardays.testcases.SearchTestcase@ba8d91c]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-02-09T17:22:33 EST" finished-at="2021-02-09T17:22:33 EST">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.dollardays.testcases.SearchTestcase@ba8d91c]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-02-09T23:20:21 EST" finished-at="2021-02-09T23:20:21 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
