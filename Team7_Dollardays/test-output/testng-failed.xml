@@ -6,15 +6,16 @@
   </listeners>
   <test thread-count="5" name="Dollar Days Test(failed)">
     <classes>
-      <class name="com.dollardays.testcases.SearchTestcase">
+      <class name="com.dollardays.testcases.TaxExemptTestcase">
         <methods>
-          <include name="VerifyLeftPaneMouseHover" invocation-numbers="0"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
+          <include name="ValidateTaxExemptRequiredFields"/>
           <include name="quit"/>
+          <include name="taxExempt_ValidateTaxExemptRequiredFields"/>
           <include name="setUpBrowser"/>
         </methods>
-      </class> <!-- com.dollardays.testcases.SearchTestcase -->
+      </class> <!-- com.dollardays.testcases.TaxExemptTestcase -->
     </classes>
   </test> <!-- Dollar Days Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

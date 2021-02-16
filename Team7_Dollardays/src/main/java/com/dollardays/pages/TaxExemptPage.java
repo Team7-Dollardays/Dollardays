@@ -7,50 +7,42 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class Team2TaxExemptPage {
+public class TaxExemptPage {
 	WebDriver driver;
 
-	public Team2TaxExemptPage(WebDriver driver) {
+	public TaxExemptPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath = "//li[@class='dropdown']//a[@class='dropdown-toggle']")
-	private WebElement signInButton;
 	
-	public WebElement getsignInButton() {
+	@FindBy(xpath = "//a[@class='dropdown-toggle']//img[@class='header-user']")
+	private WebElement signInButton;
+	public WebElement getsignInButton()
+	{
 		return signInButton;
 	}
 	
 	@FindBy(xpath = "//a[contains(text(),'Accounts')] [@href='/myaccount/account.aspx']")
 	private WebElement signIn_accountBtn;
-	
 	public WebElement getsignIn_accountBtn() {
 		return signIn_accountBtn;
 	}
 	
-	@FindBy(xpath = "//*[contains(@class,'cookie-bar-btn')]")
-	private WebElement cookiepopup;
 	
-	public WebElement getCookiepopup() {
-		return cookiepopup;
-	}
 	@FindBy(xpath = "//a[@href='myaccount/account.aspx'] | //i[@class='fa fa-home']")
 	private WebElement account_AccountOverViewLink;
-	
 	public WebElement getaccount_AccountOverViewLink() {
 		return account_AccountOverViewLink;
 	}
 	
 	@FindBy(xpath = "//a[@href='myaccount/profile.aspx'] | //i[@class='fa fa-pencil']")
 	private WebElement account_ProfileLink;
-	
 	public WebElement getAccount_ProfileLink() {
 		return account_ProfileLink;
 	}
 	
 	@FindBy(xpath = "//a[@href='myaccount/addressbook.aspx'] | //i[@class='fa fa-book']")
 	private WebElement account_AddressBookLink;
-	
 	public WebElement getAccount_AddressBookLink() {
 		return account_AddressBookLink;
 	}
@@ -58,13 +50,12 @@ public class Team2TaxExemptPage {
 	
 	@FindBy(xpath = "//a[@href='myaccount/wallet.aspx'] | //i[@class='fa fa-credit-card-alt']")
 	private WebElement account_MyWalletLink;
-	
 	public WebElement getAccount_MyWalletLink() {
 		return account_MyWalletLink;
 	}
 	
 	
-	@FindBy(xpath = "//span[text()='Tax Exempt '] | //i[@class='fa fa-certificate']")
+	@FindBy(xpath = "//span[text()='Tax Exempt ']")
 	private WebElement account_TaxExemptLink;
 	
 	public WebElement getAccount_TaxExemptLink() {
@@ -73,35 +64,30 @@ public class Team2TaxExemptPage {
 	
 	@FindBy(xpath = "//li[@class=' boder-bot mar-top ']//a[@href='/myaccount/favorites.aspx']")
 	private WebElement account_MyFavoritesLink;
-	
 	public WebElement getAccount_MyFavoritesLink() {
 		return account_TaxExemptLink;
 	}
 	
 	@FindBy(xpath = "//li[@class=' boder-bot ']//a[@href='/myaccount/order-history.aspx']")
 	private WebElement account_OrderHistory;
-	
 	public WebElement getAccount_OrderHistory() {
 		return account_OrderHistory;
 	}
 	
 	@FindBy(xpath = "//span[text()='Log Out '] | //i[@class='fa fa-sign-out']")
 	private WebElement account_LogOut;
-	
 	public WebElement getAccount_LogOut() {
 		return account_LogOut;
 	}
 	
 	@FindBy(xpath = "//a[text()='Edit'][@href='profile.aspx']")
 	private WebElement account_LoginInfoEditLink;
-	
 	public WebElement getAccount_LoginInfoEditLink() {
 		return account_LoginInfoEditLink;
 	}
 	
 	@FindBy(xpath = "//a[@href='profile.aspx#anchor-personal']")
 	private WebElement account_PersonalInfoEditLink;
-	
 	public WebElement getAccount_PersonalInfoEditLink() {
 		return account_PersonalInfoEditLink;
 	}

@@ -134,7 +134,7 @@ public class SearchPage {
 		
 	// get 'Show more Products' in 'Search Result' box
 	//a[text()='Shop More Products']
-	@FindBy(xpath="//a[text()='Shop More Products']")
+	@FindBy(xpath ="//div[@class='rfk_results']/div/div/a")
 	private WebElement shopmoreBtn;
 	public WebElement getSearchResult_ShopMoreBtn()
 	{

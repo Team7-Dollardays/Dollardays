@@ -6,10 +6,11 @@
 </listeners>
   <test thread-count="5" name="Dollar Days_Integration_Test">
     <classes>
-      <class name="com.dollardays.testcases.SubmitRequestTest"/>
-      <class name="com.dollardays.testcases.LogoutTestCase"/>
+      <class name="com.dollardays.testcases.SubmitRequestTestcase"/>
+      <class name="com.dollardays.testcases.LogoutTestcase"/>
       <class name="com.dollardays.testcases.LoginTestcase"/>
-      <class name="com.dollardays.testcases.MenuTestCase"/>
+      <class name="com.dollardays.testcases.MenuTestcase"/>
+       <class name="com.dollardays.testcases.SearchTestcase"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

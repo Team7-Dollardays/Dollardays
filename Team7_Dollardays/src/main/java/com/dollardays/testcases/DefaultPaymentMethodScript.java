@@ -309,5 +309,41 @@ public class DefaultPaymentMethodScript extends BaseTest{
 
 	}
 
+/* Wallet add new card 
+ * submitPage.getwallet().click();
+		
+		List<WebElement> cards = driver.findElements(By.xpath("//*[@class='address-box default_address']"));
+		WebElement cardTextHolder = null;
+		WebElement setAsDefaultLink = null;
+		WebElement defaultCard = null;
+		String currentCardNo = null;
+		String cardNo ="Test";
+		Boolean cardFound = false;
+		if(cards.size() != 0)
+		{
+			for(WebElement card : cards)
+			{
+				cardTextHolder = card.findElement(By.tagName("p"));
+				currentCardNo = cardTextHolder.getText();
+				System.out.println(currentCardNo);
+				if(currentCardNo.trim().equalsIgnoreCase(cardNo))
+				{
+					System.out.println("Card No Found" + currentCardNo);
+					setAsDefaultLink = card.findElement(By.xpath(".//a[text()=' Set as default']"));
+					Thread.sleep(1000);
+					setAsDefaultLink.click();
+					Thread.sleep(1000);
+					defaultCard = driver.findElement(By.xpath("//*[@class='address-box fixed_address']"));
+					if(defaultCard.findElement(By.tagName("p")).getText().trim().equalsIgnoreCase(cardNo))
+						System.out.println(cardNo + "Card set as Default.");	
+					cardFound = true;
+					     break;
+				}			
+			}
+			if(!cardFound)
+				System.out.println("Card no not Found.Either it is already 'set as default' or not has been added.");	
+		}
+		
+ */
 
 

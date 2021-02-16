@@ -8,7 +8,7 @@
   <test thread-count="5" name="Test">
     <classes>
      
-      <class name="com.dollardays.testcases.MenuTestCase"/>
+      <class name="com.dollardays.testcases.MenuTestcase"/>
     
     </classes>
   </test> <!-- Test -->

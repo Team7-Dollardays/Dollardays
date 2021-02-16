@@ -58,7 +58,7 @@ public class LoginPage {
 	
 	@FindBy(xpath="//*[@id=\"aspnetForm\"]/header/div/div/div/div[3]/div/ul/li[1]/a/span")
 	private WebElement userDrodown;
-	public WebElement getUserDrodown() {
+	public WebElement getUserDropdown() {
 		return userDrodown;
 	}	
 	

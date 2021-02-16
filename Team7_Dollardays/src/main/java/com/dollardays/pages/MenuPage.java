@@ -183,7 +183,7 @@ public class MenuPage {
 					return ele;
 				}
 			}
-			}else
+			}else  // shop all button
 			{
 				System.out.println("menuItem is " + menuItem);
 				menuItemsLinks = subMenuItemList.findElements(By.xpath(".//*[@type='button']"));

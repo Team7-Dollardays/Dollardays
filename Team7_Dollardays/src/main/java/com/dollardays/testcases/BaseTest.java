@@ -1,5 +1,7 @@
 package com.dollardays.testcases;
 
+
+
 import java.io.FileInputStream;
 import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
@@ -14,6 +16,8 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -24,11 +28,12 @@ import com.dollardays.pages.LoginPage;
 import com.dollardays.pages.SearchPage;
 
 public class BaseTest extends MT {
+	
 	public static Logger APPLICATION_LOGS = Logger.getLogger(BaseTest.class);
 	public WebDriver driver = null;
 	public Properties props = null;
 	public FileInputStream fileInputStream = null;
-
+    public WebDriverWait wait = null;
 	public void readPropertyData() throws Exception {
 
 		props = new Properties();
@@ -94,7 +99,7 @@ public class BaseTest extends MT {
 		} catch (Exception e) {
 			throw new Exception("Driver Not Found");
 		}
-
+		 wait=new WebDriverWait(driver,1000);
 		Thread.sleep(1000);
 
 	}
@@ -161,6 +166,24 @@ public class BaseTest extends MT {
 	public void quit() {
 		driver.close();
 		driver.quit();
+	}
+	
+	protected void testResults(String testCase,String actualResult,String expectedResult) 
+	{
+		try 
+		{
+			System.out.println("Actual Result : " + actualResult);
+			System.out.println("Expected Result: " + expectedResult);
+			Assert.assertEquals(actualResult, expectedResult);
+			ExtentTestManager.getTest().log(Status.PASS, "TestCase : " + testCase + " executed successfully.");
+
+		} catch (AssertionError e) {
+			ExtentTestManager.getTest().log(Status.FAIL, "Actual and Expected results mismatch");
+			ExtentTestManager.getTest().log(Status.FAIL, "Error message: " + e.getMessage());
+			Assert.assertEquals("true", "false");
+		}
+		ExtentTestManager.getTest().log(Status.INFO, "Expected Result:" + expectedResult);
+		ExtentTestManager.getTest().log(Status.INFO, "Actual Result:" + actualResult);
 	}
 
 }

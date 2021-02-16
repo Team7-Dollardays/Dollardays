@@ -31,6 +31,4 @@ public class MT {
 		long id = Thread.currentThread().getId();
 		APPLICATION_LOGS.info("After test-method-class. Thread id is: " + id);
 	}
-
-
 }

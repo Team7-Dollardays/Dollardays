@@ -9,12 +9,7 @@
 	<test name="Dollar Days Test">
 	
     <classes>
-     <class name="com.dollardays.testcases.Team2TaxExemptTestCase"/> 
-      <class name="com.dollardays.testcases.EmailPreferencesValidationsTestCase"/>
-      <class name="com.dollardays.testcases.DefaultPaymentMethodScript"/>
-      
-      
-        
+    	<class name="com.dollardays.testcases.TaxExemptTestcase"/>     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

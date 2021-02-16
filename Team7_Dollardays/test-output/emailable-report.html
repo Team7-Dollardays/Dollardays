@@ -9,10 +9,30 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Dollar Days Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,897</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Dollar Days Test</a></td><td class="num">2</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">68,158</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Dollar Days Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.dollardays.testcases.SearchTestcase</td><td><a href="#m0">verifyShowMoreProductsClick</a></td><td rowspan="1">1612930810017</td><td rowspan="1">10326</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Dollar Days Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">com.dollardays.testcases.TaxExemptTestcase</td><td><a href="#m0">ValidateTaxExemptRequiredFields</a></td><td rowspan="1">1613447264168</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m1">taxExempt_ValidateTaxExemptRequiredFields</a></td><td rowspan="1">1613447331478</td><td rowspan="1">0</td></tr><tr><th colspan="4">Dollar Days Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.dollardays.testcases.TaxExemptTestcase</td><td><a href="#m2">taxExempt_ExcepState_AllFields_Empty</a></td><td rowspan="1">1613447283903</td><td rowspan="1">17404</td></tr><tr class="passedeven"><td><a href="#m3">taxExempt_ExcepTaxID_AllFields_Empty</a></td><td rowspan="1">1613447312997</td><td rowspan="1">17396</td></tr></tbody>
 </table>
-<h2>Dollar Days Test</h2><h3 id="m0">com.dollardays.testcases.SearchTestcase#verifyShowMoreProductsClick</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{TestCase=VerifyShowMoreProductsClick, TCID=TC9, SheetName=Search, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, ExpectedResult=Clicking on &apos;Show More Products&apos;, it is navigated to &apos;Item detail&apos; page and &apos;Search for items in bulk&apos; field has item name., SearchItem=notebook, Leftpane Category=, TargetURL=https://www.dollardays.com/sitesearch.aspx?pg=1&amp;terms=notebook, =}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Dollar Days Test</h2><h3 id="m0">com.dollardays.testcases.TaxExemptTestcase#ValidateTaxExemptRequiredFields</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: org.testng.SkipException: Test not found
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.dollardays.utilities.TestUtil.checkRunMode(TestUtil.java:53)
+	at com.dollardays.utilities.TestUtil.getData(TestUtil.java:70)
+	at com.dollardays.utilities.TestUtil.getTestData(TestUtil.java:23)
+	... 25 more
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.dollardays.testcases.TaxExemptTestcase#taxExempt_ValidateTaxExemptRequiredFields</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: org.testng.SkipException: Test not found
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.dollardays.utilities.TestUtil.checkRunMode(TestUtil.java:53)
+	at com.dollardays.utilities.TestUtil.getData(TestUtil.java:70)
+	at com.dollardays.utilities.TestUtil.getTestData(TestUtil.java:23)
+	... 25 more
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.dollardays.testcases.TaxExemptTestcase#taxExempt_ExcepState_AllFields_Empty</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{TaxID=, TestCase=Except State all required fields empty, ExpiryDate=, filePath=, TCID=TC3, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=, ExpectedResult=Tax id missing.
+Expiry date is missine.
+Tax document file is missing.
+, DocumentName=xyz, TestScenario=Negative, State=Florida}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.dollardays.testcases.TaxExemptTestcase#taxExempt_ExcepTaxID_AllFields_Empty</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{TaxID=0.0, TestCase=Except TaxID all required fields empty, ExpiryDate=, filePath=, TCID=TC2, SheetName=TaxExempt, Runmode=Yes, UserName=srikanthtesting100@gmail.com, Password=cGFzc3dvcmQxMjM=, FileType=, ExpectedResult=State is missing.
+Expiry date is missine.
+Tax document file is missing., DocumentName=xyz, TestScenario=Negative, State=}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

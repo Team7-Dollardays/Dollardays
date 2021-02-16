@@ -2,6 +2,7 @@ package com.dollardays.utilities;
 
 
 
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Hashtable;
 
@@ -17,7 +18,7 @@ public class TestUtil {
 	public static Logger APPLICATION_LOGS = Logger.getLogger(TestUtil.class);
 	
 	@DataProvider(name="dd-dataprovider")
-	public static Object[][] getTestData(ITestContext context, Method metod){
+	public static Object[][] getTestData(ITestContext context, Method metod) throws IOException{
 		DDDataProvider params = metod.getAnnotation(DDDataProvider.class);
 		Object obj[][] = getData(params.datafile(), params.sheetName(), params.testcaseID(), params.runmode());
 		return obj;
@@ -26,7 +27,8 @@ public class TestUtil {
 	// Function to check is Test Executable or not
 	public static boolean isExecutable(Xls_Reader xlsfile, String sheet,String testName) {
 		try {
-			for (int rowNum = 2; rowNum<= xlsfile.getRowCount(sheet); rowNum++) {
+			int totalrow = xlsfile.getRowCount(sheet);
+			for (int rowNum = 2; rowNum<= totalrow; rowNum++) {
 				if (xlsfile.getCellData(sheet, "TCID", rowNum).equals(testName)) {
 					if (xlsfile.getCellData(sheet, "Runmode", rowNum).equalsIgnoreCase("yes"))
 						return true;
@@ -41,15 +43,20 @@ public class TestUtil {
 	}
 
 	// Function to to check the RunMode of Test
-	public static void checkRunMode(String sheetName, String testName,String file) {
+	public static void checkRunMode(String sheetName, String testName,String file)throws IOException {
+		
 		 Xls_Reader xls = new Xls_Reader(file, sheetName);
 
 		if (!TestUtil.isExecutable(xls, sheetName, testName))
+		{
+			System.out.println("Test is skipped as runmode is set 'no' in excel sheet");
 			throw new SkipException("Test not found");
+		}
+		
 	}
 
 	// Function to get Test Data form Excel File for a particular Test case
-	public static Object[][] getData(String file ,String sheetName, String testName,String testMode) {
+	public static Object[][] getData(String file ,String sheetName, String testName,String testMode) throws IOException {
 		
 
 		Xls_Reader xlsData = new Xls_Reader(file, sheetName);
@@ -60,6 +67,7 @@ public class TestUtil {
 		
 		if(testName !=null && !testName.isEmpty())
 		{
+			checkRunMode(sheetName,testName,file);
 			int testStartRow = -1;
 			data = new Object [1] [1];
 			// To find the Row Number from where our Test is being start
@@ -99,6 +107,7 @@ public class TestUtil {
 			// To find the Row Number from where our Test is being start
 			for (int rNum = 2; rNum<= xlsData.getRowCount(sheetName); rNum++)
 			{
+				// checkRunMode(sheetName,xlsData.getCellData(sheetName, "TCID", rNum),file);
 				 if (xlsData.getCellData(sheetName, "Runmode", rNum).equalsIgnoreCase(testMode)) 
 				 {
 					testStartRow ++;

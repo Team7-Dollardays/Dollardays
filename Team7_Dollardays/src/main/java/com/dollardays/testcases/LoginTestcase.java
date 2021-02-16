@@ -16,7 +16,6 @@ public class LoginTestcase extends BaseTest{
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
 	public void invokeLogin(Hashtable<String, String> datatable) throws Exception{
     //	VideoRecorder_utlity.startRecord("GoogleTestRecording");//Starting point of video recording
-		ExtentTestManager.startTest("Login-" +datatable.get("TCID") + ":" + datatable.get("TestCase"));
 		ExtentTestManager.getTest().log(Status.INFO,
 				"Testcase: " + (datatable.get("TCID")) + "-----" + (datatable.get("TestCase")));
 		Thread.sleep(1000);

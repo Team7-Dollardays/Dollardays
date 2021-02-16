@@ -3,13 +3,16 @@ package com.dollardays.listners;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.Test;
+
 import com.aventstack.extentreports.Status;
 
-public class TestListener implements ITestListener {
-
+	public class TestListener implements ITestListener
+	{
 
 	public void onStart(ITestContext context) {
 		System.out.println("*** Test Suite " + context.getName() + " started ***");
+		
 	}
 
 	public void onFinish(ITestContext context) {
@@ -18,9 +21,11 @@ public class TestListener implements ITestListener {
 		//ExtentReport.getExtentReport().flush();
 	}
 
-	public void onTestStart(ITestResult result) {
-		System.out.println(("*** Running test method " + result.getMethod().getMethodName() + "..."));
-	 //   ExtentTestManager.startTest(result.getMethod().getMethodName());
+	public void onTestStart(ITestResult result)
+	{
+		System.out.println(("*** Running test method- " + result.getMethod().getMethodName() + "..."));
+	
+	    ExtentTestManager.startTest(result.getMethod().getMethodName());
 	}
 
 	public void onTestSuccess(ITestResult result) {
@@ -36,7 +41,7 @@ public class TestListener implements ITestListener {
 
 	public void onTestSkipped(ITestResult result) {
 		System.out.println("*** Test " + result.getMethod().getMethodName() + " skipped...");
-		
+		ExtentTestManager.startTest(result.getMethod().getMethodName());
 		ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped");
 	}
 
