@@ -171,8 +171,6 @@ public class TaxExemptPage {
 		return account_ChooseFileBtn;
 	}
 	@FindBy(xpath="//*[@id=\"tax_te_modal\"]/div/div/div[1]/button")
-	
-	
 	private WebElement homePopup_Close;
 	public WebElement gethomePopup_Close() {
 		return homePopup_Close;

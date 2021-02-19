@@ -12,7 +12,6 @@
           <include name="beforeClass"/>
           <include name="ValidateTaxExemptRequiredFields"/>
           <include name="quit"/>
-          <include name="taxExempt_ValidateTaxExemptRequiredFields"/>
           <include name="setUpBrowser"/>
         </methods>
       </class> <!-- com.dollardays.testcases.TaxExemptTestcase -->

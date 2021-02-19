@@ -1,0 +1,7 @@
+18:24:05,828  INFO com.dollardays.testcases.MT :19 - this is information from MT Class.
+18:24:05,831 ERROR com.dollardays.testcases.MT :20 - this is error message from MT CLass.
+18:24:05,831 FATAL com.dollardays.testcases.MT :21 - Hi,This is fatal messsage
+18:24:05,831  WARN com.dollardays.testcases.MT :22 - this is Warning.
+18:24:05,896  INFO com.dollardays.testcases.MT :35 - Method is running with id1
+18:24:05,907  INFO com.dollardays.testcases.MT :29 - Before test-class. Thread id is: 1
+18:24:24,952  INFO com.dollardays.testcases.MT :47 - After test-method-class. Thread id is: 1

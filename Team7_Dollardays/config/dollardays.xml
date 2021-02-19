@@ -11,6 +11,7 @@
       <class name="com.dollardays.testcases.LoginTestcase"/>
       <class name="com.dollardays.testcases.MenuTestcase"/>
        <class name="com.dollardays.testcases.SearchTestcase"/>
+       <class name="com.dollardays.testcases.TaxExemptTestcase"/>  
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
