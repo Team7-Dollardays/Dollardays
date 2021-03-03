@@ -6,7 +6,9 @@
 	<artifactId>c</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>DollarDays_Jan2021</name>
-
+	<profiles>
+	<profile>
+ <id>Team7DDProject</id>
 	<build>
 		<plugins>
 			<plugin>
@@ -24,7 +26,8 @@
 			</plugin>
 		</plugins>
 	</build>
-
+</profile>
+</profiles>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>

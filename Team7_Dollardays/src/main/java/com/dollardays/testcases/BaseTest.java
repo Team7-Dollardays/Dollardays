@@ -1,13 +1,10 @@
 package com.dollardays.testcases;
 
-
-
 import java.io.FileInputStream;
 import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.util.Hashtable;
 import java.util.Properties;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +17,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import com.aventstack.extentreports.Status;
 import com.dollardays.commons.Base64;
 import com.dollardays.listners.ExtentTestManager;

@@ -530,7 +530,7 @@ public class MenuTestcase extends BaseTest {
 	}
 	
 	//TC 7 - paging 
-	public boolean isPage_Selected(MenuPage menuPage) throws InterruptedException
+	private boolean isPage_Selected(MenuPage menuPage) throws InterruptedException
 	{
 		try
 		{
@@ -593,7 +593,7 @@ public class MenuTestcase extends BaseTest {
 		return true;
 	}
 	
-	public void openMobileMenu(Hashtable<String, String> datatable) throws UnsupportedEncodingException, InterruptedException, GeneralSecurityException 
+	private void openMobileMenu(Hashtable<String, String> datatable) throws UnsupportedEncodingException, InterruptedException, GeneralSecurityException 
 	{
 		System.out.println(datatable.get("TestCase"));
 		ExtentTestManager.getTest().log(Status.INFO,

@@ -15,6 +15,7 @@ import com.dollardays.utilities.DDDataProvider;
 import com.dollardays.utilities.TestUtil;
 
 public class ExampleSearchTestcase extends BaseTest{
+	
 	@DDDataProvider(datafile = "testdata/testdata1.xlsx", sheetName = "Sheet1",  testcaseID = "TC1", runmode = "Yes")
 	@Test(dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
 	public void search(Hashtable<String, String> hash) throws UnsupportedEncodingException, InterruptedException, GeneralSecurityException {

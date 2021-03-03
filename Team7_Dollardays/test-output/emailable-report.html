@@ -9,10 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite12</th></tr>
-<tr><td><a href="#t0">Dollar Days Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,072</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Dollar Days Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">13,942</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite12</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Dollar Days Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.dollardays.testcases.LoginTestcase</td><td><a href="#m0">invokeLogin</a></td><td rowspan="1">1613777052957</td><td rowspan="1">6950</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite12</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Dollar Days Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.dollardays.testcases.LoginTestcase</td><td><a href="#m0">invokeLogin</a></td><td rowspan="1">1613780336511</td><td rowspan="1">1531</td></tr></tbody>
 </table>
-<h2>Dollar Days Test</h2><h3 id="m0">com.dollardays.testcases.LoginTestcase#invokeLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{TestCase=Valid Login Credentials, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=Login, UserName=srikanthtesting100@gmail.com, TCID=TC1}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Dollar Days Test</h2><h3 id="m0">com.dollardays.testcases.LoginTestcase#invokeLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{TestCase=Valid Login Credentials, Password=cGFzc3dvcmQxMjM=, Runmode=Yes, SheetName=Login, UserName=srikanthtesting100@gmail.com, TCID=TC1}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Can not set org.openqa.selenium.remote.RemoteWebElement field com.dollardays.pages.LoginPage.signIn to com.sun.proxy.$Proxy12
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:117)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
+	at com.dollardays.pages.LoginPage.&lt;init&gt;(LoginPage.java:21)
+	at com.dollardays.testcases.LoginTestcase.invokeLogin(LoginTestcase.java:22)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -8,9 +8,10 @@
     <classes>
       <class name="com.dollardays.testcases.LoginTestcase">
         <methods>
+          <include name="testMethodOne"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="invokeLogin"/>
+          <include name="invokeLogin" invocation-numbers="0"/>
           <include name="quit"/>
           <include name="setUpBrowser"/>
         </methods>

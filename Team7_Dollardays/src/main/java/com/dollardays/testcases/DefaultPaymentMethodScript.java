@@ -19,7 +19,6 @@ import org.openqa.selenium.support.ui.Select;
 public class DefaultPaymentMethodScript extends BaseTest{	
 	String sheet = "Default_PM";
 	private JavascriptExecutor js = null;	
-	//private static DefaultPaymentMethodPage DefaultPaymentMethodPage = null;
 
 	@DDDataProvider(datafile = "testdata/Team2Data_AccontPage.xlsx", sheetName = "Default_PM", testcaseID = "TC1", runmode = "Yes")	
 	@Test(priority = 1, dataProvider = "dd-dataprovider", dataProviderClass = TestUtil.class)
