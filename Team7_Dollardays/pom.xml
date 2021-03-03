@@ -20,7 +20,7 @@
 				<configuration>
 				<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>config\Team2TaxExempt.xml</suiteXmlFile>
+						<suiteXmlFile>config\dollardays.xml</suiteXmlFile>
 							</suiteXmlFiles>
 				</configuration>
 			</plugin>
