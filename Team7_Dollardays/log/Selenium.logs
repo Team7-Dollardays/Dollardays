@@ -1,7 +1,37 @@
-19:18:49,184  INFO com.dollardays.testcases.MT :19 - this is information from MT Class.
-19:18:49,187 ERROR com.dollardays.testcases.MT :20 - this is error message from MT CLass.
-19:18:49,188 FATAL com.dollardays.testcases.MT :21 - Hi,This is fatal messsage
-19:18:49,188  WARN com.dollardays.testcases.MT :22 - this is Warning.
-19:18:49,277  INFO com.dollardays.testcases.MT :35 - Method is running with id1
-19:18:49,289  INFO com.dollardays.testcases.MT :29 - Before test-class. Thread id is: 1
-19:19:03,197  INFO com.dollardays.testcases.MT :47 - After test-method-class. Thread id is: 1
+13:56:13,343  INFO com.dollardays.testcases.MT :19 - this is information from MT Class.
+13:56:13,347 ERROR com.dollardays.testcases.MT :20 - this is error message from MT CLass.
+13:56:13,348 FATAL com.dollardays.testcases.MT :21 - Hi,This is fatal messsage
+13:56:13,348  WARN com.dollardays.testcases.MT :22 - this is Warning.
+13:56:13,348  INFO com.dollardays.testcases.MT :19 - this is information from MT Class.
+13:56:13,349 ERROR com.dollardays.testcases.MT :20 - this is error message from MT CLass.
+13:56:13,349 FATAL com.dollardays.testcases.MT :21 - Hi,This is fatal messsage
+13:56:13,349  WARN com.dollardays.testcases.MT :22 - this is Warning.
+13:56:13,350  INFO com.dollardays.testcases.MT :19 - this is information from MT Class.
+13:56:13,350 ERROR com.dollardays.testcases.MT :20 - this is error message from MT CLass.
+13:56:13,350 FATAL com.dollardays.testcases.MT :21 - Hi,This is fatal messsage
+13:56:13,350  WARN com.dollardays.testcases.MT :22 - this is Warning.
+13:56:13,351  INFO com.dollardays.testcases.MT :19 - this is information from MT Class.
+13:56:13,351 ERROR com.dollardays.testcases.MT :20 - this is error message from MT CLass.
+13:56:13,351 FATAL com.dollardays.testcases.MT :21 - Hi,This is fatal messsage
+13:56:13,351  WARN com.dollardays.testcases.MT :22 - this is Warning.
+13:56:13,353  INFO com.dollardays.testcases.MT :19 - this is information from MT Class.
+13:56:13,354 ERROR com.dollardays.testcases.MT :20 - this is error message from MT CLass.
+13:56:13,354 FATAL com.dollardays.testcases.MT :21 - Hi,This is fatal messsage
+13:56:13,354  WARN com.dollardays.testcases.MT :22 - this is Warning.
+13:56:13,354  INFO com.dollardays.testcases.MT :19 - this is information from MT Class.
+13:56:13,354 ERROR com.dollardays.testcases.MT :20 - this is error message from MT CLass.
+13:56:13,355 FATAL com.dollardays.testcases.MT :21 - Hi,This is fatal messsage
+13:56:13,355  WARN com.dollardays.testcases.MT :22 - this is Warning.
+13:56:13,464  INFO com.dollardays.testcases.MT :35 - Method is running with id1
+13:56:13,470  INFO com.dollardays.testcases.MT :29 - Before test-class. Thread id is: 1
+13:56:33,451  INFO com.dollardays.testcases.MT :47 - After test-method-class. Thread id is: 1
+13:56:33,451  INFO com.dollardays.testcases.MT :29 - Before test-class. Thread id is: 1
+13:56:33,632  INFO com.dollardays.testcases.MT :47 - After test-method-class. Thread id is: 1
+13:56:33,632  INFO com.dollardays.testcases.MT :29 - Before test-class. Thread id is: 1
+13:56:33,925  INFO com.dollardays.testcases.MT :47 - After test-method-class. Thread id is: 1
+13:56:33,926  INFO com.dollardays.testcases.MT :29 - Before test-class. Thread id is: 1
+13:56:35,200  INFO com.dollardays.testcases.MT :47 - After test-method-class. Thread id is: 1
+13:56:35,200  INFO com.dollardays.testcases.MT :29 - Before test-class. Thread id is: 1
+13:56:36,067  INFO com.dollardays.testcases.MT :47 - After test-method-class. Thread id is: 1
+13:56:36,068  INFO com.dollardays.testcases.MT :29 - Before test-class. Thread id is: 1
+13:56:37,590  INFO com.dollardays.testcases.MT :47 - After test-method-class. Thread id is: 1
